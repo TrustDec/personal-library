@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>All Code Is Slop (Except Mine) · 双语图文</title>
+<style>
+  :root {
+    --bg: #f6f1e8;
+    --paper: #fffdf8;
+    --ink: #1c1917;
+    --en: #1c1917;
+    --zh: #3d5a80;
+    --muted: #7a7268;
+    --line: #e6ddd0;
+    --accent: #d4574e;
+    --pink: #c45c7a;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Iowan Old Style", "Palatino Linotype", Palatino, "Songti SC", Georgia, serif;
+  }
+  .wrap {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 48px 24px 96px;
+  }
+  header.hero {
+    text-align: left;
+    margin-bottom: 36px;
+    padding-bottom: 28px;
+    border-bottom: 1px solid var(--line);
+  }
+  header.hero .kicker {
+    font-family: "PingFang SC", "Hiragino Sans GB", sans-serif;
+    font-size: 12px;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--pink);
+    margin: 0 0 12px;
+  }
+  h1 {
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    line-height: 1.15;
+    margin: 0 0 8px;
+    letter-spacing: -0.02em;
+  }
+  h1 .sub {
+    display: block;
+    font-size: .55em;
+    font-weight: 500;
+    color: var(--pink);
+    margin-top: 6px;
+    letter-spacing: 0;
+  }
+  .meta {
+    font-family: "PingFang SC", "Hiragino Sans GB", sans-serif;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.7;
+    margin: 16px 0 0;
+  }
+  .note {
+    background: #fff7ea;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 14px 16px;
+    font-family: "PingFang SC", "Hiragino Sans GB", sans-serif;
+    font-size: 13.5px;
+    color: #5c564e;
+    line-height: 1.65;
+    margin: 20px 0 36px;
+  }
+  nav.toc {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 18px 22px;
+    margin: 0 0 40px;
+  }
+  nav.toc strong {
+    display: block;
+    font-family: "PingFang SC", sans-serif;
+    font-size: 13px;
+    margin-bottom: 8px;
+  }
+  nav.toc a {
+    display: block;
+    color: var(--zh);
+    text-decoration: none;
+    font-family: "PingFang SC", sans-serif;
+    font-size: 14px;
+    padding: 4px 0;
+  }
+  nav.toc a:hover { color: var(--accent); }
+  h2 {
+    margin: 56px 0 18px;
+    padding-top: 8px;
+    border-top: 1px solid var(--line);
+  }
+  h2 .en {
+    display: block;
+    font-size: 1.45rem;
+    letter-spacing: -0.02em;
+  }
+  h2 .zh {
+    display: block;
+    font-family: "PingFang SC", "Hiragino Sans GB", sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--pink);
+    margin-top: 4px;
+  }
+  .pair { margin: 0 0 1.15em; }
+  .pair .en {
+    margin: 0;
+    font-size: 1.08rem;
+    line-height: 1.55;
+    color: var(--en);
+  }
+  .pair .zh {
+    margin: .18em 0 0;
+    font-family: "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", sans-serif;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--zh);
+  }
+  figure {
+    margin: 28px 0;
+    background: var(--paper);
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    box-shadow: 0 10px 28px rgba(60,40,20,.06);
+  }
+  figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+    background: #fff;
+  }
+  figcaption {
+    font-family: "PingFang SC", sans-serif;
+    font-size: 13px;
+    padding: 10px 14px 12px;
+    color: var(--muted);
+    line-height: 1.55;
+    background: #fbf8f2;
+    border-top: 1px solid var(--line);
+  }
+  figcaption .t {
+    display: inline-block;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 11px;
+    color: var(--pink);
+    margin-right: 8px;
+  }
+  figcaption .en { display: block; color: #444; }
+  figcaption .zh { display: block; }
+  footer {
+    margin-top: 64px;
+    padding-top: 20px;
+    border-top: 1px solid var(--line);
+    font-family: "PingFang SC", sans-serif;
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.7;
+  }
+  a { color: var(--zh); }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="hero">
+  <p class="kicker">AI Engineer Code Summit · San Francisco · 2026-11-11</p>
+  <h1>All Code Is Slop (Except Mine)
+    <span class="sub">所有代码都是垃圾，除了我的</span>
+  </h1>
+  <p class="meta">
+    Lauren Tan（@poteto）· Principal Engineer · Grok Bot @ SpaceXSI<br>
+    原片 17 分 31 秒 · 中英对照图文 · 幻灯片截自原视频
+  </p>
+</header>
+<div class="note">
+  英文按现场讲稿整理（已修正自动字幕里的 Potato / Graph Bot / SpaceX SI 等识别错误）。中文逐段对照，方便双语阅读。数字以幻灯片为准：她个人 10 月合入 3,127 个 PR；Grok Bot 团队 10 月合入 10,926 个 PR；回滚提交占比从 6 月 0.98% 降到 10 月 0.47%。
+</div>
+<nav class="toc">
+  <strong>目录</strong>
+  <a href="#s1">1. 开场：别人的代码都是 slop</a>
+  <a href="#s2">2. 产量爆炸之后，工作变成「质量 × 数量」</a>
+  <a href="#s3">3. poteto 倒金字塔：怎么信任 Agent</a>
+  <a href="#s4">4. 代码库是记忆，也是花园</a>
+  <a href="#s5">5. Dune：用架构消灭需要「分寸感」的 API</a>
+  <a href="#s6">6. 注释和 Markdown 是逃生舱</a>
+  <a href="#s7">7. 验证是最重要的一步</a>
+  <a href="#s8">8. 11,000 个 PR，回滚率却在下降</a>
+  <a href="#s9">9. 先修好内环，再去建软件工厂</a>
+</nav>
+
+<h2 id="s1"><span class="en">1. Other people’s code is slop</span><span class="zh">1. 开场：别人的代码都是 slop</span></h2>
+<figure>
+  <img src="slides/00-speaker.jpg" alt="Lauren Tan on stage at AI Engineer Code Summit.">
+  <figcaption>
+    <span class="t">00:18</span>
+    <span class="en">Lauren Tan on stage at AI Engineer Code Summit.</span>
+    <span class="zh">Lauren Tan 在 AI Engineer Code Summit 台上。</span>
+  </figcaption>
+</figure>
+<div class="pair">
+  <p class="en">OK. So, once again, my name is poteto. I’m working on Grok Bot at SpaceXSI.</p>
+  <p class="zh">好。再说一次，我叫 poteto。我在 SpaceXSI 做 Grok Bot。</p>
+</div>
+<div class="pair">
+  <p class="en">Can we have a quick show of hands? Have any of you ever looked at code written by someone else and thought, “This is complete slop”? Well, me too.</p>
+  <p class="zh">举个手？有没有人看过别人写的代码，心里想：「这完全是垃圾（slop）」？我也有。</p>
+</div>
+<figure>
+  <img src="slides/01-title.jpg" alt="Title slide: all code is slop — poteto (aka Lauren Tan), Grok Bot @ SpaceXSI.">
+  <figcaption>
+    <span class="t">00:26</span>
+    <span class="en">Title slide: all code is slop — poteto (aka Lauren Tan), Grok Bot @ SpaceXSI.</span>
+    <span class="zh">标题页：all code is slop。poteto，也就是 Lauren Tan。</span>
+  </figcaption>
+</figure>
+<div class="pair">
+  <p class="en">But today I will convince you that this junk can be turned into gold.</p>
+  <p class="zh">但今天我想说服你们：这些垃圾可以变成黄金。</p>
+</div>
+<figure>
+  <img src="slides/02-blessed-craft.jpg" alt="Our Blessed Craft vs Their Barbarous Slop — the same 4,000-line PR, two moral labels.">
+  <figcaption>
+    <span class="t">00:36</span>
+    <span class="en">Our Blessed Craft vs Their Barbarous Slop — the same 4,000-line PR, two moral labels.</span>
+    <span class="zh">「我们神圣的手艺」对「他们野蛮的垃圾」——同一份 4000 行 PR，两套道德标签。</span>
+  </figcaption>
+</figure>
+<div class="pair">
+  <p class="en">When we write the code, we call it craft. When somebody else does the exact same thing, we call it slop. A heroic 4,000-line PR on our side is a brutish 4,000-line PR on theirs.</p>
+  <p class="zh">自己写的叫手艺，别人写的同样东西就叫 slop。我们这边是「英勇的 4000 行 PR」，对面就是「粗野的 4000 行 PR」。</p>
+</div>
+<h2 id="s2"><span class="en">2. Quality at volume</span><span class="zh">2. 产量爆炸之后，工作变成「质量 × 数量」</span></h2>
+<div class="pair">
+  <p class="en">Last month I did something crazy: I shipped 3,000 pull requests to production.</p>
+  <p class="zh">上个月我干了件疯狂的事：往生产环境合入了 3,000 个 pull request。</p>
+</div>
+<figure>
+  <img src="slides/03-3000-prs.jpg" alt="Personal PRs to production, Mar–Oct 2026: 68 → 3,127. Total 10,732.">
+  <figcaption>
+    <span class="t">00:52</span>
+    <span class="en">Personal PRs to production, Mar–Oct 2026: 68 → 3,127. Total 10,732.</span>
+    <span class="zh">她个人合入生产的 PR：3 月 68 个，10 月 3,127 个，累计 10,732。</span>
+  </figcaption>
+</figure>
+<div class="pair">
+  <p class="en">The chart is more precise than the title. March was 68. July 1,113. August 2,401. October 3,127. 10,732 in total.</p>
+  <p class="zh">图比标题更精确：3 月 68，7 月 1,113，8 月 2,401，10 月 3,127，一共 10,732。</p>
+</div>
+<div class="pair">
+  <p class="en">Before agents, we never worried about volume, except in exceptional cases. At my previous company they called such people “coding machines.” People like Bret Taylor, who once rewrote all of Google Maps in a weekend. Just an incredibly productive engineer.</p>
+  <p class="zh">有 Agent 之前，除了极少数人，没人真正操心产量。上一家公司把这种人叫「编码机器」。比如 Bret Taylor，传说一个周末重写了整个 Google Maps。就是那种极致高产的工程师。</p>
+</div>
+<figure>
+  <img src="slides/04-quality-quantity.jpg" alt="quality & quantity — everyone can be a coding machine.">
+  <figcaption>
+    <span class="t">01:16</span>
+    <span class="en">quality & quantity — everyone can be a coding machine.</span>
+    <span class="zh">质量与数量——每个人都可以成为编码机器。</span>
+  </figcaption>
+</figure>
+<div class="pair">
+  <p class="en">And now, thanks to agents, everyone can become a coding machine. My thesis is that the job of a software engineer — the meta of programming — is to figure out how to maintain or even improve the quality of the code while significantly increasing productivity.</p>
+  <p class="zh">现在有了 Agent，人人都能成为编码机器。我的论点是：软件工程师的工作、编程这件事的 meta，是在大幅提高生产力的同时，维持甚至提高代码质量。</p>
+</div>
+<div class="pair">
+  <p class="en">Some people call this a “software factory.” I prefer to simplify: everything comes down to trust. Not blind trust, but investing in the agent environment so you can be sure they will do the right thing.</p>
+  <p class="zh">有人把这叫「软件工厂」。我更愿意说简单点：一切归结为信任。不是盲目信任，而是投资 Agent 的环境，让你确信它们会做对的事。</p>
+</div>
+<figure>
+  <img src="slides/05-trust-curve.jpg" alt="Trust vs number of agents. The curve flattens toward a potato-marked frontier at thousands of agents.">
+  <figcaption>
+    <span class="t">01:30</span>
+    <span class="en">Trust vs number of agents. The curve flattens toward a potato-marked frontier at thousands of agents.</span>
+    <span class="zh">信任随 Agent 数量上升，到成百上千时趋近前沿。右上角那颗土豆就是 frontier。</span>
+  </figcaption>
+</figure>
+<div class="pair">
+  <p class="en">This takes a lot of effort. It took me half a year to get to the point where I could issue thousands of merge requests, many of them while I was sleeping. It is quite possible, and it will take you much less time than it took me.</p>
+  <p class="zh">这很费功夫。我花了半年，才走到能发出几千个 merge request、其中很多是在睡觉时合进去的。这件事做得到，而且你们花的时间会比我少得多。</p>
+</div>
+<figure>
+  <img src="slides/06-high-trust-loop.jpg" alt="Low trust: agent writes slop, human verifies. High trust: agent writes good code, agent verifies it.">
+  <figcaption>
+    <span class="t">01:56</span>
+    <span class="en">Low trust: agent writes slop, human verifies. High trust: agent writes good code, agent verifies it.</span>
+    <span class="zh">低信任：Agent 写 slop，人来验证。高信任：Agent 写好代码，Agent 自己验证。</span>
+  </figcaption>
+</figure>
+<div class="pair">
+  <p class="en">Most people get stuck in the low-trust loop: the agent writes slop code, a human verifies it, issues are found, repeat. You want the high-trust loop: the agent writes good code, and the agent verifies it.</p>
+  <p class="zh">大多数人卡在低信任循环：Agent 写出 slop，人来验证，发现问题，再来一轮。你要去的是高信任循环：Agent 写出好代码，并且由 Agent 自己验证。</p>
+</div>
+<h2 id="s3"><span class="en">3. The poteto pyramid</span><span class="zh">3. poteto 倒金字塔：怎么信任 Agent</span></h2>
+<div class="pair">
+  <p class="en">So let’s start by discussing how to move from low to high levels of trust. This inverted pyramid shows how I allocate time to my agents’ environments.</p>
+  <p class="zh">先说怎么从低信任走到高信任。这张倒金字塔，是我把时间投在 Agent 环境上的方式。</p>
+</div>
+<figure>
+  <img src="slides/07-poteto-pyramid.jpg" alt="The poteto pyramid, top to bottom: codebase, static analysis, verification, prose, human review. Cost grows downward.">
+  <figcaption>
+    <span class="t">02:04</span>
+    <span class="en">The poteto pyramid, top to bottom: codebase, static analysis, verification, prose, human review. Cost grows downward.</span>
+    <span class="zh">poteto 金字塔，从上到下：代码库、静态分析、验证、文字指令、人工审查。越往下成本越高。</span>
+  </figcaption>
+</figure>
+<div class="pair">
+  <p class="en">The first two layers are deterministic — they live in your own code. Good API design, architecture, refactoring. Then linters, type systems, compilers, tests, CI.</p>
+  <p class="zh">最上面两层是确定性的，都长在你自己的代码里。好的 API 设计、架构、重构；然后是 lint、类型系统、编译器、测试、CI。</p>
+</div>
+<div class="pair">
+  <p class="en">You can use both of these levels together to restrict what agents can do and force them to do the right thing by default.</p>
+  <p class="zh">这两层可以一起用，限制 Agent 能做的事，逼它们默认就做对。</p>
+</div>
+<div class="pair">
+  <p class="en">Verification — both runtime and formal — is a great tool for detecting errors, checking the properties and invariants of a system, and checking whether the agent understood your goals and intentions.</p>
+  <p class="zh">验证（运行时验证和形式化验证）能抓错、检查系统该守住的性质和不变量，也能检查 Agent 到底有没有理解你的目标和意图。</p>
+</div>
+<div class="pair">
+  <p class="en">And finally, you want to add some descriptive instructions. These are rules, skills, AGENTS.md files — anything that requires judgment. That layer stays small, because text is not enforceable.</p>
+  <p class="zh">最后才加一点描述性指令：rules、skills、AGENTS.md，凡是还需要判断力的东西。这一层要小，因为文字不可强制执行。</p>
+</div>
+<div class="pair">
+  <p class="en">Human review sits at the tip. It is the most expensive place to catch a mistake.</p>
+  <p class="zh">最尖的那一层是人工审查。在这里抓错，成本最高。</p>
+</div>
+<h2 id="s4"><span class="en">4. Code is memory. Treat the codebase like a garden.</span><span class="zh">4. 代码库是记忆，也是花园</span></h2>
+<figure>
+  <img src="slides/08-code-is-memory.jpg" alt="code is memory — the codebase is one of the largest inputs an agent sees.">
+  <figcaption>
+    <span class="t">03:16</span>
+    <span class="en">code is memory — the codebase is one of the largest inputs an agent sees.</span>
+    <span class="zh">code is memory：代码库是 Agent 看到的最大输入之一。</span>
+  </figcaption>
+</figure>
+<div class="pair">
+  <p class="en">But let’s start with your codebase. Agents generate their results based on input data. The quality of that input really matters, and your codebase is one of the biggest sources of it.</p>
+  <p class="zh">先从代码库讲起。Agent 根据输入生成结果。输入质量非常重要，而代码库是最大的输入源之一。</p>
+</div>
+<div class="pair">
+  <p class="en">So when you correct your agent, consider turning that into a deterministic check instead of adding a new line to your rules or AGENTS.md. It is much easier to reproduce in code, and it inspires more trust.</p>
+  <p class="zh">所以你纠正 Agent 的时候，优先把它做成确定性检查，而不是在 rules 或 AGENTS.md 里再加一行。写进代码更容易复现，也更值得信任。</p>
+</div>
+<div class="pair">
+  <p class="en">An analogy I like: your codebase is like a garden. Before, code would come in a few pull requests at a time. I remember coming to work in 2024 and reviewing three merge requests that my colleagues had written. Today that number is approaching 300.</p>
+  <p class="zh">我喜欢的一个比喻：代码库像一座花园。以前代码是几个 PR 一批批进来。我记得 2024 年上班，审同事写的三个 merge request。现在这个数字接近 300。</p>
+</div>
+<div class="pair">
+  <p class="en">Now each engineer is a team of hundreds or even thousands of agents, and the code is coming in so fast it almost feels organic, like a living thing.</p>
+  <p class="zh">现在每个工程师背后是成百上千个 Agent，代码来得太快，几乎像连续的流，像活的东西。</p>
+</div>
+<figure>
+  <img src="slides/09-organic-architecture.jpg" alt="Organic Architecture — new code grows around the concrete foundations you pour.">
+  <figcaption>
+    <span class="t">04:16</span>
+    <span class="en">Organic Architecture — new code grows around the concrete foundations you pour.</span>
+    <span class="zh">有机架构：新代码绕着你浇好的混凝土地基生长。</span>
+  </figcaption>
+</figure>
+<div class="pair">
+  <p class="en">In this analogy, your codebase, the constraints you impose, and the safeguards you put in place are the concrete foundation around which new code written by your agents grows. In many ways, the work of a software engineer becomes similar to gardening.</p>
+  <p class="zh">在这个比喻里，代码库、你施加的约束、你设下的护栏，就是混凝土地基，Agent 写的新代码绕着它生长。软件工程师的工作，在很多方面开始像园艺。</p>
+</div>
+<figure>
+  <img src="slides/10-copy-weeds.jpg" alt="Each copy makes the next copy more likely. One workaround becomes the pattern.">
+  <figcaption>
+    <span class="t">04:40</span>
+    <span class="en">Each copy makes the next copy more likely. One workaround becomes the pattern.</span>
+    <span class="zh">每复制一次，下一次复制就更可能发生。一次 workaround，会变成「既有模式」。</span>
+  </figcaption>
+</figure>
+<div class="pair">
+  <p class="en">Since code is the largest input for agents, any workaround, anti-pattern, obsolete code, or technical debt will likely be copied by the next agent, because it looks like an established pattern in your codebase. It’s like weeds or pests in your garden. Before you know it, they’re spreading everywhere.</p>
+  <p class="zh">代码是 Agent 最大的输入，所以任何 workaround、反模式、过时代码、技术债，下一个 Agent 都很可能照抄——因为它看起来像代码库里的既定模式。像花园里的杂草和害虫，不知不觉就蔓延开。</p>
+</div>
+<div class="pair">
+  <p class="en">So you want to make your codebase as clean as possible, so that agents only ever copy quality stuff.</p>
+  <p class="zh">所以你要把代码库尽量收拾干净，让 Agent 永远只复制高质量的东西。</p>
+</div>
+<figure>
+  <img src="slides/11-read-the-code.jpg" alt="Walk me through this code. Yes, you should read the code sometimes.">
+  <figcaption>
+    <span class="t">04:52</span>
+    <span class="en">Walk me through this code. Yes, you should read the code sometimes.</span>
+    <span class="zh">「带我过一遍这段代码。」是的，你有时还是得读代码。</span>
+  </figcaption>
+</figure>
+<h2 id="s5"><span class="en">5. Dune, and why nuance tends to lead to slop</span><span class="zh">5. Dune：用架构消灭需要「分寸感」的 API</span></h2>
+<div class="pair">
+  <p class="en">Okay, let’s look at real examples. Dune is a client framework we built for Grok Bot to implement this idea of organic architecture. Technically it is not that complicated. You can think of Dune as something like Next.js for Electron apps.</p>
+  <p class="zh">看真实例子。Dune 是我们为 Grok Bot 做的客户端框架，用来落地「有机架构」。技术上并不复杂。你可以把它想成 Electron 应用的 Next.js。</p>
+</div>
+<figure>
+  <img src="slides/12-dune.jpg" alt="Dune = app framework (navigation, rendering, IPC) + one folder per feature, strict import bans, no comments in code.">
+  <figcaption>
+    <span class="t">05:20</span>
+    <span class="en">Dune = app framework (navigation, rendering, IPC) + one folder per feature, strict import bans, no comments in code.</span>
+    <span class="zh">Dune = 应用框架（导航、渲染、IPC）+ 每个功能一个文件夹、严格禁止跨层 import、代码里不写注释。</span>
+  </figcaption>
+</figure>
+<div class="pair">
+  <p class="en">The interesting thing about Dune is the limitations and linting rules. We encoded many lessons learned while building desktop applications. One of those lessons: anything that requires nuance to use effectively often leads to slop.</p>
+  <p class="zh">Dune 真正有意思的是限制和 lint 规则。我们把做桌面应用时学到的很多教训写进了框架。其中一条：凡是要用好就得靠「分寸感」的东西，往往通向 slop。</p>
+</div>
+<figure>
+  <img src="slides/13-nuance-slop.jpg" alt="nuance tends to lead to slop — just design better APIs.">
+  <figcaption>
+    <span class="t">05:44</span>
+    <span class="en">nuance tends to lead to slop — just design better APIs.</span>
+    <span class="zh">分寸感往往通向 slop。做法是：设计更好的 API。</span>
+  </figcaption>
+</figure>
+<div class="pair">
+  <p class="en">A classic example is useEffect in React. It has its uses, but it is often misused. Some joke that you need a PhD to use useEffect. In other words, to use it well you really need to take many nuances into account. Agents are not very good at using it.</p>
+  <p class="zh">经典例子是 React 的 useEffect。它有用武之地，但经常被误用。有人开玩笑说，用 useEffect 需要一个博士学位。也就是说，要用好它，得照顾很多细微之处。Agent 并不擅长这个。</p>
+</div>
+<div class="pair">
+  <p class="en">So our solution was to simply disallow it in product code. It is only allowed in some places inside the Dune API. This issue has now been categorically eliminated. We no longer need to catch it during code review.</p>
+  <p class="zh">所以我们的办法是：产品代码里直接禁用。只允许出现在 Dune API 内部的少数地方。这个问题现在被从根上消灭了，code review 里再也不用抓它。</p>
+</div>
+<figure>
+  <img src="slides/14-directory-structure.jpg" alt="Directory structure is a form of context. electron-renderer and electron-main cannot import each other — not even types.">
+  <figcaption>
+    <span class="t">06:48</span>
+    <span class="en">Directory structure is a form of context. electron-renderer and electron-main cannot import each other — not even types.</span>
+    <span class="zh">目录结构本身就是上下文。electron-renderer 和 electron-main 不能互相 import，连类型也不行。</span>
+  </figcaption>
+</figure>
+<div class="pair">
+  <p class="en">Another pattern we use is context through directory structure. One anti-pattern we noticed in Cursor, an Electron app, was that agents would often import main-thread code into the renderer, causing long tasks and jank.</p>
+  <p class="zh">另一个模式是：用目录结构携带上下文。我们在 Cursor（也是 Electron 应用）里看到过一个反模式：Agent 经常把主线程代码 import 进渲染线程，造成长任务和卡顿。</p>
+</div>
+<div class="pair">
+  <p class="en">So in Grok Bot and other Dune apps we made it very standardized. We have two top-level directories, literally called electron-renderer and electron-main, and imports between them are prohibited by our dependency-graph analyzer and lint rules.</p>
+  <p class="zh">所以在 Grok Bot 和其它 Dune 应用里，我们把它标准化了。两个顶层目录就叫 electron-renderer 和 electron-main，它们之间的 import 被依赖图分析器和 lint 规则禁止。</p>
+</div>
+<div class="pair">
+  <p class="en">These are simple linting rules that are easy to set up, but it means one less thing we need to think about when reviewing code.</p>
+  <p class="zh">这些 lint 规则很简单，但意味着 code review 时又少想一件事。</p>
+</div>
+<h2 id="s6"><span class="en">6. Comments and markdown are escape hatches</span><span class="zh">6. 注释和 Markdown 是逃生舱</span></h2>
+<figure>
+  <img src="slides/15-unsolicited-markdown.jpg" alt="Stop agents from writing unsolicited markdown. “I made it up.”">
+  <figcaption>
+    <span class="t">07:08</span>
+    <span class="en">Stop agents from writing unsolicited markdown. “I made it up.”</span>
+    <span class="zh">别让 Agent 主动写 Markdown。「这是我编的。」</span>
+  </figcaption>
+</figure>
+<div class="pair">
+  <p class="en">Another amazing thing I noticed is the agents’ use of Markdown. This applies to documentation, code comments, rules, or skills. They use it as a place to justify not doing things right.</p>
+  <p class="zh">我还注意到一件很惊人的事：Agent 很爱写 Markdown。文档、代码注释、rules、skills 都算。它们把这些地方当成「解释自己为什么没做对」的借口栏。</p>
+</div>
+<div class="pair">
+  <p class="en">I don’t know if you’ve encountered this, but they can focus too much on a small correction you made and treat it like a strict rule that can never be broken.</p>
+  <p class="zh">不知道你们有没有碰到：你随口改了一点，它们就会过度解读，当成永远不能打破的铁律。</p>
+</div>
+<figure>
+  <img src="slides/16-183-timers.jpg" alt="Quick fixes considered harmful. One setTimeout to fix a flicker became 183 timers by Oct 17.">
+  <figcaption>
+    <span class="t">07:44</span>
+    <span class="en">Quick fixes considered harmful. One setTimeout to fix a flicker became 183 timers by Oct 17.</span>
+    <span class="zh">权宜之计有害。一个为了修闪烁的 setTimeout，到 10 月 17 日变成了 183 个 timer。</span>
+  </figcaption>
+</figure>
+<div class="pair">
+  <p class="en">Here is another example from Cursor. Agents really liked to use imperative timers — setTimeout, requestAnimationFrame, requestIdleCallback — as a quick fix to patch the architectural conflict between VS Code’s imperative style and React’s declarative style.</p>
+  <p class="zh">再看 Cursor 的例子。Agent 特别爱用命令式 timer：setTimeout、requestAnimationFrame、requestIdleCallback，当作权宜之计，去打 VS Code 命令式风格和 React 声明式风格之间的架构冲突补丁。</p>
+</div>
+<div class="pair">
+  <p class="en">So our architectural choice actually significantly degraded both client and agent performance. If you’ve ever worked with performance in JavaScript, you know that when lots of timers are created and destroyed quickly, it causes major garbage collection, leading to lag and jank.</p>
+  <p class="zh">于是这个架构选择，同时显著拖慢了客户端和 Agent。做过 JavaScript 性能的人都知道：大量 timer 被快速创建和销毁，会引发严重 GC，带来卡顿。</p>
+</div>
+<div class="pair">
+  <p class="en">But the worst part is that the agents wrote a bunch of comments explaining why this quick fix was justified. Before we knew it, timers had spread everywhere, and the program’s performance had suffered significantly.</p>
+  <p class="zh">更糟的是，Agent 还写了一堆注释，解释这个权宜之计为什么合理。还没反应过来，timer 已经到处都是，性能明显变差。</p>
+</div>
+<figure>
+  <img src="slides/17-comments-liabilities.jpg" alt="Comments are liabilities. 65,824 comments on Jul 31, down to 1,227 today.">
+  <figcaption>
+    <span class="t">08:28</span>
+    <span class="en">Comments are liabilities. 65,824 comments on Jul 31, down to 1,227 today.</span>
+    <span class="zh">注释是负债。7 月 31 日还有 65,824 条注释，今天剩下 1,227。</span>
+  </figcaption>
+</figure>
+<div class="pair">
+  <p class="en">At Grok Bot, we learned this lesson and decided to simply ban 99% of comments, because they go stale quickly. People rarely read these comments anyway. And this again gives the agent a loophole to justify not doing the right thing because it’s hard.</p>
+  <p class="zh">在 Grok Bot，我们学到这一课，决定直接禁止 99% 的注释——它们过时很快。而且人本来也很少读这些注释。这又给了 Agent 一个漏洞：因为难，所以写一段话来合理化「没做对」。</p>
+</div>
+<div class="pair">
+  <p class="en">The worst thing about comments is that they are not mandatory. So what seems like a good intention — “I’ll tell the next agent not to do that” — never becomes something you can trust.</p>
+  <p class="zh">注释最糟的一点是：它们没有强制力。看起来是好意，「我告诉下一个 Agent 别这么干」，但这永远不会变成你能信任的东西。</p>
+</div>
+<div class="pair">
+  <p class="en">So in Grok Bot and Dune we now have linting rules that produce nice, very useful error messages. They prompt the agent to fix the root cause, the real problem, rather than just patching it.</p>
+  <p class="zh">所以现在 Grok Bot 和 Dune 的 lint 规则会给出很好、很有用的报错，促使 Agent 去修根因，而不是打补丁。</p>
+</div>
+<figure>
+  <img src="slides/18-correct-your-agent.jpg" alt="Whenever you correct your agent, the number of deterministic checks climbed from 7 in July to 167 by November.">
+  <figcaption>
+    <span class="t">09:28</span>
+    <span class="en">Whenever you correct your agent, the number of deterministic checks climbed from 7 in July to 167 by November.</span>
+    <span class="zh">每次纠正 Agent，就多一条确定性检查。从 7 月的 7 条，到 11 月的 167 条。</span>
+  </figcaption>
+</figure>
+<div class="pair">
+  <p class="en">Our general principle: whenever we correct our agents, it turns into one of these deterministic checks, or we think about how to categorically eliminate the problem through better API design or architecture.</p>
+  <p class="zh">总原则是：每次纠正 Agent，就变成这类确定性检查；或者想办法用更好的 API 设计或架构，把这个问题从根上消灭。</p>
+</div>
+<div class="pair">
+  <p class="en">If you do this often enough, you will notice that there are fewer and fewer things to consider when reviewing code. At a certain point you realize there is nothing left to watch. And you can simply let agents merge most of their own pull requests themselves.</p>
+  <p class="zh">你经常这样做，就会发现 code review 要盯的东西越来越少。到某个临界点，你会发现没什么要看了。然后就可以让 Agent 自己合入它们的大多数 PR。</p>
+</div>
+<h2 id="s7"><span class="en">7. Verification is the most important step</span><span class="zh">7. 验证是最重要的一步</span></h2>
+<figure>
+  <img src="slides/19-verification-most-important.jpg" alt="Verification is the most important step.">
+  <figcaption>
+    <span class="t">09:48</span>
+    <span class="en">Verification is the most important step.</span>
+    <span class="zh">验证是最重要的一步。</span>
+  </figcaption>
+</figure>
+<div class="pair">
+  <p class="en">Moving forward, verification is a very important part of how we make our agents more autonomous, and also how we increase our confidence and trust in their work. Our code review process has now really come down to analyzing verification artifacts: videos, screenshots, diagrams, formal verification.</p>
+  <p class="zh">接下来，验证是我们让 Agent 更自主、也让自己更有信心的关键。现在的 code review，本质上是在看验证产物：视频、截图、图、形式化验证。</p>
+</div>
+<figure>
+  <img src="slides/20-runtime-verification.jpg" alt="Runtime verification uses a feature map: what features exist, how users reach them, what proves they work.">
+  <figcaption>
+    <span class="t">10:20</span>
+    <span class="en">Runtime verification uses a feature map: what features exist, how users reach them, what proves they work.</span>
+    <span class="zh">运行时验证里的 feature map：有哪些功能、用户怎么走到、用什么证明它工作。</span>
+  </figcaption>
+</figure>
+<div class="pair">
+  <p class="en">The simplest example is runtime verification, which is just a fancy way of saying: give the agent the ability to run the code itself and use the debugging tools that human developers also use, such as the Chrome DevTools protocol.</p>
+  <p class="zh">最简单的是运行时验证，说白了就是：让 Agent 自己跑代码，用人类开发者也会用的调试工具，比如 Chrome DevTools 协议。</p>
+</div>
+<div class="pair">
+  <p class="en">In our runtime verification skills, we have something we call a “feature map.” This is essentially a sitemap of all the features available in your app from a user’s perspective. That means agents don’t have to guess when you say “that thing on the left panel.” It creates a shared vocabulary of terms.</p>
+  <p class="zh">运行时验证的 skill 里有一个我们叫 feature map 的东西。本质上是从用户视角出发的功能站点地图。这样你说「左边栏那个东西」时，Agent 不用猜。它建立了一套共享词汇。</p>
+</div>
+<div class="pair">
+  <p class="en">We also use our own CLI in these skills so that agents can reuse the same CLI and driver every time, which reduces token usage and is also testable.</p>
+  <p class="zh">这些 skill 里还有我们自己的 CLI，让 Agent 每次复用同一套 CLI 和 driver，既省 token，也可以被测试。</p>
+</div>
+<figure>
+  <img src="slides/21-formal-verification.jpg" alt="Formal verification: TLA+ models state machines; Lean proves algorithms. Used for notifications across devices and a virtualization library.">
+  <figcaption>
+    <span class="t">11:00</span>
+    <span class="en">Formal verification: TLA+ models state machines; Lean proves algorithms. Used for notifications across devices and a virtualization library.</span>
+    <span class="zh">形式化验证：TLA+ 建模状态机，Lean 证明算法。用在跨设备通知流，以及自研虚拟化库。</span>
+  </figcaption>
+</figure>
+<div class="pair">
+  <p class="en">And recently we have also started looking at formal verification. We now use TLA+ to validate models of core user flows, such as notifications, across devices and platforms. We also use Lean to prove certain algorithms. For example, we created our own virtualization library and use Lean there to make sure we don’t have flicker or jitter issues.</p>
+  <p class="zh">最近我们也开始看形式化验证。现在用 TLA+ 去验证核心用户流的模型，比如跨设备、跨平台的通知。也用 Lean 证明某些算法。比如我们自己写了虚拟化库，用 Lean 确保没有闪烁或抖动。</p>
+</div>
+<div class="pair">
+  <p class="en">We are still experimenting with this approach. It looks very promising. We have already found many errors through formal verification. This is of course not a panacea. We view it as another tool, another layer in our agent environment.</p>
+  <p class="zh">整体还在实验。看起来很有希望。我们已经靠形式化验证找到不少错误。这当然不是万灵药。我们把它看成工具箱里的又一层。</p>
+</div>
+<figure>
+  <img src="slides/22-bombadil.jpg" alt="UI property-based testing with Bombadil, which has already caught UI bugs.">
+  <figcaption>
+    <span class="t">11:40</span>
+    <span class="en">UI property-based testing with Bombadil, which has already caught UI bugs.</span>
+    <span class="zh">用 Bombadil 做 UI 基于性质的测试，已经抓到过界面 bug。</span>
+  </figcaption>
+</figure>
+<div class="pair">
+  <p class="en">This is a very quick video, but another thing we started looking at is property-based interface testing. We use a library called Bombadil. It has already helped us identify several bugs in the interface.</p>
+  <p class="zh">很快带过：我们还开始做 UI 的 property-based testing，用的库叫 Bombadil。已经帮我们抓住过几个界面 bug。</p>
+</div>
+<figure>
+  <img src="slides/23-cindy-tweet.jpg" alt="Cindy Sridharan: 70% of daily tokens go into verifying patches, only ~20–30% into creating them.">
+  <figcaption>
+    <span class="t">12:12</span>
+    <span class="en">Cindy Sridharan: 70% of daily tokens go into verifying patches, only ~20–30% into creating them.</span>
+    <span class="zh">Cindy Sridharan：每天 70% 的 token 花在验证补丁上，只有大约 20–30% 花在生成上。</span>
+  </figcaption>
+</figure>
+<div class="pair">
+  <p class="en">If you look at it more broadly, I saw Cindy’s tweet six months ago, where she wrote that she couldn’t trust her agents because of small errors that got into the code. What she lacked was a verification process. And now, six months later, she says 70% of her daily tokens are spent on verification. I would say this is consistent with my observations — most of my tokens are also going to verification.</p>
+  <p class="zh">再看大一点。六个月前我看到 Cindy 的推，说她不信任自己的 Agent，因为细小错误会混进代码。她缺的是验证流程。六个月后她说，每天 70% 的 token 花在验证上。这和我的观察一致——我的 token 大部分也花在验证上。</p>
+</div>
+<figure>
+  <img src="slides/24-token-spend.jpg" alt="Cindy’s map of verification: pre-production tests, deploy, release, post-release. None of this is new.">
+  <figcaption>
+    <span class="t">12:36</span>
+    <span class="en">Cindy’s map of verification: pre-production tests, deploy, release, post-release. None of this is new.</span>
+    <span class="zh">Cindy 的验证地图：生产前测试、部署、发布、发布后。这些手法没有一样是新的。</span>
+  </figcaption>
+</figure>
+<div class="pair">
+  <p class="en">If you look closely at her process, none of these things are anything new or unique that we haven’t had before. These are simply good development tools that previously might have been too expensive to use because they were difficult to understand, write, or maintain.</p>
+  <p class="zh">仔细看她的流程，没有一样是我们以前没有的新东西。它们只是好的工程工具，过去太贵了——难懂、难写、难维护。</p>
+</div>
+<div class="pair">
+  <p class="en">But agents drastically reduce these costs. We are truly entering a golden era of software testing and verification, as agents allow us to test everything much more thoroughly than was cost-effective before.</p>
+  <p class="zh">但 Agent 大幅降低了这些成本。我们正在进入软件测试和验证的黄金时代：以前不划算的彻底测试，现在变得划算了。</p>
+</div>
+<div class="pair">
+  <p class="en">Formal verification also helps you better understand how your product should work, and whether agents truly understand your intentions and goals.</p>
+  <p class="zh">形式化验证还能帮你想清楚产品到底该怎么工作，以及 Agent 是否真的理解了你的意图和目标。</p>
+</div>
+<figure>
+  <img src="slides/25-statechart.jpg" alt="/statechart in pstack visualizes state machines from the user’s point of view.">
+  <figcaption>
+    <span class="t">13:16</span>
+    <span class="en">/statechart in pstack visualizes state machines from the user’s point of view.</span>
+    <span class="zh">pstack 里的 /statechart，从用户视角把状态机画出来。</span>
+  </figcaption>
+</figure>
+<div class="pair">
+  <p class="en">I created a new tool called /statechart in my pstack plugin that helps visualize state machines from a user’s perspective. It’s much easier for me to review this together with the videos and screenshots we provide.</p>
+  <p class="zh">我在 pstack 插件里做了一个叫 /statechart 的工具，从用户视角可视化状态机。配上我们提供的视频和截图，审起来容易得多。</p>
+</div>
+<h2 id="s8"><span class="en">8. 11,000 PRs, and the revert rate went down</span><span class="zh">8. 11,000 个 PR，回滚率却在下降</span></h2>
+<div class="pair">
+  <p class="en">So, now let’s see what the promised paradise looks like. What do you get in return for all this investment?</p>
+  <p class="zh">那么，这些投资换来的「应许之地」长什么样？</p>
+</div>
+<figure>
+  <img src="slides/26-11k-prs.jpg" alt="Grok Bot team merged 10,926 PRs in October, up from 809 in June. 23,370 total.">
+  <figcaption>
+    <span class="t">13:40</span>
+    <span class="en">Grok Bot team merged 10,926 PRs in October, up from 809 in June. 23,370 total.</span>
+    <span class="zh">Grok Bot 团队 10 月合入 10,926 个 PR，6 月只有 809。五个月合计 23,370。</span>
+  </figcaption>
+</figure>
+<div class="pair">
+  <p class="en">On the Grok Bot team, our velocity is taking off and rapidly increasing. Last month our team shipped an incredible 11,000 pull requests to production, which is just an insane number.</p>
+  <p class="zh">Grok Bot 团队的速度在起飞，而且还在加速。上个月团队往生产合入了大约 11,000 个 PR，这个数字很疯狂。</p>
+</div>
+<figure>
+  <img src="slides/27-releases.jpg" alt="Desktop app releases: 7 in August after launch, 19 in September, 15 in October. Median gap 28 hours in October.">
+  <figcaption>
+    <span class="t">13:48</span>
+    <span class="en">Desktop app releases: 7 in August after launch, 19 in September, 15 in October. Median gap 28 hours in October.</span>
+    <span class="zh">桌面端发布：8 月上线后 7 次，9 月 19 次，10 月 15 次。10 月发布间隔中位数 28 小时。</span>
+  </figcaption>
+</figure>
+<div class="pair">
+  <p class="en">Our client’s release rate has also increased. We cut a new stable version about once a day.</p>
+  <p class="zh">客户端发布频率也提高了。大约一天一个稳定版。</p>
+</div>
+<figure>
+  <img src="slides/28-everyone-productive.jpg" alt="People who merged at least one PR: 15 in June, 227 in October. One person did 1,000+.">
+  <figcaption>
+    <span class="t">14:08</span>
+    <span class="en">People who merged at least one PR: 15 in June, 227 in October. One person did 1,000+.</span>
+    <span class="zh">至少合入一个 PR 的人数：6 月 15 人，10 月 227 人。有一个人合了 1,000+。</span>
+  </figcaption>
+</figure>
+<div class="pair">
+  <p class="en">The core development team also ships significantly more. In addition, we have many occasional or drive-by contributors who don’t always have full context, but they also contribute. In October, about 227 people created at least one pull request.</p>
+  <p class="zh">核心开发团队也明显在多交付。另外还有很多偶发、路过的贡献者，他们并不总是有完整上下文，但也在贡献。10 月大约 227 人至少提了一个 PR。</p>
+</div>
+<div class="pair">
+  <p class="en">So with this acceleration, you might be thinking: wouldn’t this lead to chaos? Wouldn’t this turn into a pile of junk?</p>
+  <p class="zh">速度这么快，你可能会想：这不会变成混乱吗？不会堆成一堆垃圾吗？</p>
+</div>
+<figure>
+  <img src="slides/29-revert-rate.jpg" alt="Revert rate as % of commits: 0.98% in June, 0.47% in October.">
+  <figcaption>
+    <span class="t">14:16</span>
+    <span class="en">Revert rate as % of commits: 0.98% in June, 0.47% in October.</span>
+    <span class="zh">被回滚的提交占比：6 月 0.98%，10 月 0.47%。</span>
+  </figcaption>
+</figure>
+<div class="pair">
+  <p class="en">But in reality, the number of reverted merge requests has relatively decreased and remains stable at about half a percent.</p>
+  <p class="zh">实际上，被回滚的比例相对下降了，稳定在大约 0.5%。</p>
+</div>
+<figure>
+  <img src="slides/30-velocity-without-compromise.jpg" alt="Velocity without compromise: startup and typing got much faster; a few resource metrics got worse. Still Electron.">
+  <figcaption>
+    <span class="t">14:52</span>
+    <span class="en">Velocity without compromise: startup and typing got much faster; a few resource metrics got worse. Still Electron.</span>
+    <span class="zh">速度没有牺牲质量：启动和输入变快了；少数资源指标变差。它仍然是 Electron。</span>
+  </figcaption>
+</figure>
+<div class="pair">
+  <p class="en">The most interesting thing about this release pace and PR volume is that Grok Bot’s performance has not just remained stable, but has improved in many ways since launch. Launching, typing, opening new chats, switching between them — all of it has become faster.</p>
+  <p class="zh">更有意思的是：在这种发布节奏和 PR 量之下，Grok Bot 的性能不仅稳住了，上线以来很多地方还变快了。启动、打字、打开新对话、切换对话，都更快了。</p>
+</div>
+<div class="pair">
+  <p class="en">Keep in mind that Grok Bot remains an Electron application for now. There is a ceiling. But it is already much faster than many other agent interfaces that exist today. For an Electron app with such a high development speed and so many contributors, I’d say that’s pretty good.</p>
+  <p class="zh">别忘了，Grok Bot 目前仍是 Electron 应用。天花板是有的。但它已经比现在很多 Agent 界面快得多。以这种开发速度和这么多贡献者，一个 Electron 应用能做成这样，我觉得相当不错。</p>
+</div>
+<h2 id="s9"><span class="en">9. Don’t automate a bad loop</span><span class="zh">9. 先修好内环，再去建软件工厂</span></h2>
+<figure>
+  <img src="slides/31-software-factory.jpg" alt="Should I build a software factory?">
+  <figcaption>
+    <span class="t">15:40</span>
+    <span class="en">Should I build a software factory?</span>
+    <span class="zh">我该去建一座软件工厂吗？</span>
+  </figcaption>
+</figure>
+<div class="pair">
+  <p class="en">So before you create a “software factory” and automate everything you can, try to fine-tune your agent’s performance by first improving your own codebase.</p>
+  <p class="zh">所以在你建「软件工厂」、把能自动化的都自动化之前，先通过改善自己的代码库，把 Agent 的表现调好。</p>
+</div>
+<div class="pair">
+  <p class="en">Start with lint rules to prevent new anti-patterns from appearing, then clean up the code from old ones. Also, make sure your verification strategy is truly robust. Much of this work is a prerequisite for automation anyway.</p>
+  <p class="zh">先用 lint 规则阻止新的反模式出现，再清理旧的。同时确保验证策略真正扎实。这些工作，本来就是自动化的前提。</p>
+</div>
+<figure>
+  <img src="slides/32-dont-automate-bad-loop.jpg" alt="Don’t automate a bad loop. Improve the inner loop before you wire it to triggers.">
+  <figcaption>
+    <span class="t">16:00</span>
+    <span class="en">Don’t automate a bad loop. Improve the inner loop before you wire it to triggers.</span>
+    <span class="zh">不要去自动化一个坏循环。先把内环修好，再接到触发器上。</span>
+  </figcaption>
+</figure>
+<div class="pair">
+  <p class="en">If your inner coding loop produces garbage, then automating that loop will only produce more garbage, and you will have to spend more and more tokens to fix the problem, which, as we know, is very expensive.</p>
+  <p class="zh">如果你的内部编码循环在产垃圾，自动化这个循环只会产更多垃圾，然后你得砸越来越多 token 去修。我们都知道，这非常贵。</p>
+</div>
+<div class="pair">
+  <p class="en">When you make these investments in your codebase, static analysis, and runtime verification, you will find that much becomes possible with such a foundation, and that you can easily build your own factory on top of it.</p>
+  <p class="zh">当你在代码库、静态分析和运行时验证上做了这些投资，会发现有了这个地基，很多事情突然变得可能，工厂也可以轻易建在上面。</p>
+</div>
+<figure>
+  <img src="slides/33-grok-bot-outer-loop.jpg" alt="Grok Bot as the outer loop: X feedback, Linear, Slack, cron, Datadog — then a shared Team Bot runs the inner loop.">
+  <figcaption>
+    <span class="t">16:08</span>
+    <span class="en">Grok Bot as the outer loop: X feedback, Linear, Slack, cron, Datadog — then a shared Team Bot runs the inner loop.</span>
+    <span class="zh">Grok Bot 作为外环：X 反馈、Linear、Slack、cron、Datadog，再交给共享 Team Bot 跑内环。</span>
+  </figcaption>
+</figure>
+<div class="pair">
+  <p class="en">And when you’re ready, Grok Bot is a great way to build that outer loop. We have a variety of connectors and routines that can run Cursor, cloud agents, and projects that allow you to manage hundreds or even thousands of agents.</p>
+  <p class="zh">准备好了之后，Grok Bot 是搭外环的好方式。我们有各种连接器和 routine，可以拉起 Cursor、云端 Agent 和项目，让你编排成百上千个 Agent。</p>
+</div>
+<div class="pair">
+  <p class="en">As a quick example: every time we cut a new release, Grok Bot automatically starts a new project for us in Cursor, which fuzzes the entire application, the entire build, and finds bugs by running the application and using it as a real user.</p>
+  <p class="zh">举个快例子：每次我们发新版本，Grok Bot 都会自动在 Cursor 里开一个新项目，对整个应用、整个构建做 fuzz，像真实用户一样跑应用找 bug。</p>
+</div>
+<div class="pair">
+  <p class="en">And then it opens a PR with fixes for each bug found and automatically merges them — as crazy as that may sound. And that’s because our codebase is high enough quality that pull requests are successful by default, and most of the product code we deploy no longer requires deep human review.</p>
+  <p class="zh">然后它会给找到的每个 bug 开修复 PR，并且自动合入——听着很疯狂。之所以敢这么干，是因为代码库质量已经够高，PR 默认就是成功的，我们上线的大多数产品代码不再需要人做深度审查。</p>
+</div>
+<figure>
+  <img src="slides/34-except-yours.jpg" alt="Closing slide: all code is slop (except yours).">
+  <figcaption>
+    <span class="t">17:00</span>
+    <span class="en">Closing slide: all code is slop (except yours).</span>
+    <span class="zh">收尾：所有代码都是垃圾（除了你的）。</span>
+  </figcaption>
+</figure>
+<div class="pair">
+  <p class="en">So, when you have a solid foundation and good organic architecture, you can turn chaos into gold and release products at high speed without compromising on quality.</p>
+  <p class="zh">所以，当地基扎实、有机架构做好，你就能把混乱变成黄金，高速发布产品，同时不牺牲质量。</p>
+</div>
+<div class="pair">
+  <p class="en">My name is poteto, also known as Lauren. Thank you again for listening to my talk.</p>
+  <p class="zh">我是 poteto，也叫 Lauren。再次感谢你们听完这场演讲。</p>
+</div>
+
+<footer>
+  来源：<a href="https://www.youtube.com/watch?v=O_zcc6Xl12g">All Code Is Slop (Except Mine) — Lauren Tan, SpaceXSI</a> · AI Engineer Code Summit，2026 年 11 月 11 日，旧金山。<br>
+  幻灯片从本地视频 <code>youtube_O_zcc6Xl12g_1920x1080.mp4</code> 截取。英文按现场口播整理，数字以幻灯片为准。中文为对照翻译。<br>
+  打开方式：用浏览器打开本文件 <code>index.html</code>。图片在同目录 <code>slides/</code>。
+</footer>
+</div>
+</body>
+</html>
