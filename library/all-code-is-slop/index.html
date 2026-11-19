@@ -1,207 +1,14 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>All Code Is Slop (Except Mine) · 双语图文</title>
-<style>
-  :root {
-    --bg: #f6f1e8;
-    --paper: #fffdf8;
-    --ink: #1c1917;
-    --en: #1c1917;
-    --zh: #3d5a80;
-    --muted: #7a7268;
-    --line: #e6ddd0;
-    --accent: #d4574e;
-    --pink: #c45c7a;
-  }
-  * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--ink);
-    font-family: "Iowan Old Style", "Palatino Linotype", Palatino, "Songti SC", Georgia, serif;
-  }
-  .wrap {
-    max-width: 820px;
-    margin: 0 auto;
-    padding: 48px 24px 96px;
-  }
-  header.hero {
-    text-align: left;
-    margin-bottom: 36px;
-    padding-bottom: 28px;
-    border-bottom: 1px solid var(--line);
-  }
-  header.hero .kicker {
-    font-family: "PingFang SC", "Hiragino Sans GB", sans-serif;
-    font-size: 12px;
-    letter-spacing: .14em;
-    text-transform: uppercase;
-    color: var(--pink);
-    margin: 0 0 12px;
-  }
-  h1 {
-    font-size: clamp(1.8rem, 4vw, 2.6rem);
-    line-height: 1.15;
-    margin: 0 0 8px;
-    letter-spacing: -0.02em;
-  }
-  h1 .sub {
-    display: block;
-    font-size: .55em;
-    font-weight: 500;
-    color: var(--pink);
-    margin-top: 6px;
-    letter-spacing: 0;
-  }
-  .meta {
-    font-family: "PingFang SC", "Hiragino Sans GB", sans-serif;
-    color: var(--muted);
-    font-size: 14px;
-    line-height: 1.7;
-    margin: 16px 0 0;
-  }
-  .note {
-    background: #fff7ea;
-    border: 1px solid var(--line);
-    border-radius: 12px;
-    padding: 14px 16px;
-    font-family: "PingFang SC", "Hiragino Sans GB", sans-serif;
-    font-size: 13.5px;
-    color: #5c564e;
-    line-height: 1.65;
-    margin: 20px 0 36px;
-  }
-  nav.toc {
-    background: var(--paper);
-    border: 1px solid var(--line);
-    border-radius: 14px;
-    padding: 18px 22px;
-    margin: 0 0 40px;
-  }
-  nav.toc strong {
-    display: block;
-    font-family: "PingFang SC", sans-serif;
-    font-size: 13px;
-    margin-bottom: 8px;
-  }
-  nav.toc a {
-    display: block;
-    color: var(--zh);
-    text-decoration: none;
-    font-family: "PingFang SC", sans-serif;
-    font-size: 14px;
-    padding: 4px 0;
-  }
-  nav.toc a:hover { color: var(--accent); }
-  h2 {
-    margin: 56px 0 18px;
-    padding-top: 8px;
-    border-top: 1px solid var(--line);
-  }
-  h2 .en {
-    display: block;
-    font-size: 1.45rem;
-    letter-spacing: -0.02em;
-  }
-  h2 .zh {
-    display: block;
-    font-family: "PingFang SC", "Hiragino Sans GB", sans-serif;
-    font-size: 1rem;
-    font-weight: 600;
-    color: var(--pink);
-    margin-top: 4px;
-  }
-  .pair { margin: 0 0 1.15em; }
-  .pair .en {
-    margin: 0;
-    font-size: 1.08rem;
-    line-height: 1.55;
-    color: var(--en);
-  }
-  .pair .zh {
-    margin: .18em 0 0;
-    font-family: "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", sans-serif;
-    font-size: 1rem;
-    line-height: 1.7;
-    color: var(--zh);
-  }
-  figure {
-    margin: 28px 0;
-    background: var(--paper);
-    border-radius: 14px;
-    overflow: hidden;
-    border: 1px solid var(--line);
-    box-shadow: 0 10px 28px rgba(60,40,20,.06);
-  }
-  figure img {
-    display: block;
-    width: 100%;
-    height: auto;
-    background: #fff;
-  }
-  figcaption {
-    font-family: "PingFang SC", sans-serif;
-    font-size: 13px;
-    padding: 10px 14px 12px;
-    color: var(--muted);
-    line-height: 1.55;
-    background: #fbf8f2;
-    border-top: 1px solid var(--line);
-  }
-  figcaption .t {
-    display: inline-block;
-    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
-    font-size: 11px;
-    color: var(--pink);
-    margin-right: 8px;
-  }
-  figcaption .en { display: block; color: #444; }
-  figcaption .zh { display: block; }
-  footer {
-    margin-top: 64px;
-    padding-top: 20px;
-    border-top: 1px solid var(--line);
-    font-family: "PingFang SC", sans-serif;
-    font-size: 13px;
-    color: var(--muted);
-    line-height: 1.7;
-  }
-  a { color: var(--zh); }
-</style>
-</head>
-<body>
-<div class="wrap">
-<header class="hero">
-  <p class="kicker">AI Engineer Code Summit · San Francisco · 2026-11-11</p>
-  <h1>All Code Is Slop (Except Mine)
-    <span class="sub">所有代码都是垃圾，除了我的</span>
-  </h1>
-  <p class="meta">
-    Lauren Tan（@poteto）· Principal Engineer · Grok Bot @ SpaceXSI<br>
-    17 分钟
-  </p>
-</header>
-<div class="note">
-  这场演讲探讨如何在 AI 编程的大规模产出中保持代码质量。Lauren Tan 分享了 Grok Bot 团队的实践：她个人 10 月合入 3,127 个 PR，团队合入 10,926 个 PR；回滚提交占比从 6 月的 0.98% 降至 10 月的 0.47%。
-</div>
-<nav class="toc">
-  <strong>目录</strong>
-  <a href="#s1">1. 开场：别人的代码都是 slop</a>
-  <a href="#s2">2. 产量爆炸之后，工作变成「质量 × 数量」</a>
-  <a href="#s3">3. poteto 倒金字塔：怎么信任 Agent</a>
-  <a href="#s4">4. 代码库是记忆，也是花园</a>
-  <a href="#s5">5. Dune：用架构消灭需要「分寸感」的 API</a>
-  <a href="#s6">6. 注释和 Markdown 是逃生舱</a>
-  <a href="#s7">7. 验证是最重要的一步</a>
-  <a href="#s8">8. 11,000 个 PR，回滚率却在下降</a>
-  <a href="#s9">9. 先修好内环，再去建软件工厂</a>
-</nav>
-
-<h2 id="s1"><span class="en">1. Other people’s code is slop</span><span class="zh">1. 开场：别人的代码都是 slop</span></h2>
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Lauren Tan on building software at a new scale without losing quality."><title>All Code Is Slop · Personal Library</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet"><style>
+:root{color-scheme:light;--paper:#f8f7f2;--ink:#22211e;--muted:#77736c;--line:#dedbd2;--accent:#c76545;--serif:"Newsreader",Georgia,"Songti SC",serif;--sans:"DM Sans","Noto Sans SC","PingFang SC",sans-serif}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:32px}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased}a{color:inherit}
+.sitebar{height:72px;width:min(1320px,calc(100% - 64px));margin:auto;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}.brand{display:flex;align-items:center;gap:11px;text-decoration:none;font-size:13px;font-weight:600}.brand-mark{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:var(--ink);color:var(--paper);font:500 15px var(--serif)}.back-link{color:var(--muted);text-decoration:none;font-size:12px}.reading-grid{width:min(1320px,calc(100% - 64px));margin:auto;display:grid;grid-template-columns:155px minmax(0,700px) 155px;gap:40px;justify-content:center;align-items:start;padding:42px 0 100px}.left-rail,.right-rail{position:sticky;top:30px;padding-top:18px}.rail-label{margin:0 0 16px;color:#969188;font-size:10px;font-weight:600;letter-spacing:.15em;text-transform:uppercase}.article-link{display:block;padding:11px 12px;border-left:2px solid var(--accent);background:#efede6;text-decoration:none;font:500 14px/1.4 var(--serif)}.article-index{margin:11px 0 0 14px;color:var(--muted);font-size:11px}.article-main{min-width:0}
+.hero{padding:22px 0 34px;border-bottom:1px solid var(--line)}.kicker{margin:0 0 21px;color:var(--accent);font-size:10px;font-weight:600;letter-spacing:.16em;text-transform:uppercase}h1{margin:0;font:400 clamp(3.25rem,6vw,5.1rem)/1.02 var(--serif);letter-spacing:-.032em}.title-rest{display:block;margin-top:8px;color:var(--accent);font-size:.68em;font-style:italic}.translation{margin:17px 0 0;color:#78736b;font-size:15px}.byline{margin:18px 0 0;color:var(--muted);font-size:12px;line-height:1.7}.note{margin:25px 0 54px;padding-left:17px;border-left:2px solid var(--accent);color:#555149;font-size:14px;line-height:1.85}.article-content h2{margin:66px 0 22px;padding-top:18px;border-top:1px solid var(--line);scroll-margin-top:34px}h2 .en{display:block;font:400 clamp(1.85rem,3vw,2.25rem)/1.13 var(--serif);letter-spacing:-.018em}h2 .zh{display:block;margin-top:6px;color:var(--accent);font-size:13px;font-weight:500}.pair{margin:0 0 1.35em}.pair .en{margin:0;font:400 1.075rem/1.65 var(--serif)}.pair .zh{margin:.34em 0 0;color:#525e67;font:400 1rem/1.8 var(--sans)}figure{margin:32px 0 36px;overflow:hidden;border:1px solid var(--line);border-radius:4px;background:#eeece6}figure img{display:block;width:100%;height:auto;background:#fff}figcaption{padding:11px 14px 13px;color:var(--muted);font-size:11px;line-height:1.65;background:#f1efe9}figcaption .t{margin-right:9px;color:var(--accent);font:500 10px var(--sans)}figcaption .en{display:block;margin-top:3px;color:#555149;font:13px var(--serif)}figcaption .zh{display:block;margin-top:2px}.contents{display:flex;flex-direction:column;gap:2px}.contents a{padding:8px 0 8px 12px;border-left:1px solid var(--line);color:#77736c;text-decoration:none;font-size:11px;line-height:1.45;transition:color .2s,border-color .2s}.contents a:hover,.contents a[aria-current="location"]{border-left:2px solid var(--accent);color:var(--ink)}.article-footer{margin-top:65px;padding-top:20px;border-top:1px solid var(--line);color:var(--muted);font-size:12px;line-height:1.8}.article-footer a{text-underline-offset:3px}.mobile-tools{display:none}
+.motion-ready [data-reveal]{opacity:0;transform:translateY(16px);transition:opacity .65s ease,transform .65s cubic-bezier(.2,.7,.2,1)}.motion-ready [data-reveal].is-visible{opacity:1;transform:none}@keyframes enter{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}.hero .kicker{animation:enter .65s both}.hero h1{animation:enter .75s .08s both}.hero .translation,.hero .byline{animation:enter .75s .16s both}.note{animation:enter .8s .22s both}
+@media(max-width:1120px){.reading-grid{grid-template-columns:140px minmax(0,680px) 140px;gap:24px}.sitebar,.reading-grid{width:calc(100% - 44px)}}@media(max-width:940px){.reading-grid{display:block;max-width:700px;padding-top:25px}.left-rail,.right-rail{display:none}.mobile-tools{display:flex;gap:10px;margin:0 0 24px}.mobile-tools details{position:relative;flex:1}.mobile-tools summary{list-style:none;padding:11px 13px;border:1px solid var(--line);border-radius:4px;color:var(--muted);font-size:12px;cursor:pointer}.mobile-tools summary::-webkit-details-marker{display:none}.mobile-tools details[open] .mobile-panel{position:absolute;z-index:5;top:calc(100% + 5px);left:0;right:0;max-height:60vh;overflow:auto;padding:9px 13px;border:1px solid var(--line);background:var(--paper);box-shadow:0 12px 24px #22211e12}.mobile-panel a{display:block;padding:9px 0;color:var(--muted);font-size:12px;text-decoration:none}}@media(max-width:600px){.sitebar{width:calc(100% - 36px);height:64px}.reading-grid{width:calc(100% - 36px);padding-top:18px}.hero{padding:20px 0 26px}h1{font-size:clamp(2.9rem,14vw,4.4rem)}.note{margin:21px 0 40px;font-size:13px}.article-content h2{margin-top:50px}.pair .en{font-size:1rem}.pair .zh{font-size:.94rem}}@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.motion-ready [data-reveal]{opacity:1;transform:none}}
+</style></head><body>
+<header class="sitebar"><a class="brand" href="../../"><span class="brand-mark">P</span><span>Personal Library</span></a><a class="back-link" href="../../">← All articles</a></header>
+<main class="reading-grid"><aside class="left-rail" aria-label="Article list"><p class="rail-label">The library</p><a class="article-link" href="./" aria-current="page">All Code Is Slop</a><p class="article-index">01 &nbsp;·&nbsp; AI &amp; software</p></aside>
+<div class="mobile-tools"><details><summary>In the library</summary><div class="mobile-panel"><a href="../../">← All articles</a><a href="./">All Code Is Slop</a></div></details><details><summary>On this page</summary><div class="mobile-panel"><a href="#s1">开场</a><a href="#s2">产量与质量</a><a href="#s3">信任 Agent</a><a href="#s4">代码库</a><a href="#s5">架构设计</a><a href="#s6">说明与注释</a><a href="#s7">验证</a><a href="#s8">规模化质量</a><a href="#s9">先修内环</a></div></details></div>
+<article class="article-main"><header class="hero"><p class="kicker">AI &amp; SOFTWARE &nbsp;·&nbsp; AI ENGINEER CODE SUMMIT</p><h1>All Code Is Slop<span class="title-rest">— except mine</span></h1><p class="translation">所有代码都是垃圾，除了我的</p><p class="byline">Lauren Tan &nbsp;·&nbsp; San Francisco &nbsp;·&nbsp; Nov 11, 2026 &nbsp;·&nbsp; 17 min</p></header><div class="note" data-reveal>当 AI 大幅提升代码产量，如何持续保证质量就成了新的难题。Lauren Tan 分享了 Grok Bot 团队通过代码库设计、自动验证和可靠反馈循环来提高效率的实践。</div><div class="article-content"><h2 id="s1"><span class="en">Other people’s code is slop</span><span class="zh">别人的代码都是 slop</span></h2>
 <figure>
   <img src="slides/00-speaker.jpg" alt="Lauren Tan on stage at AI Engineer Code Summit.">
   <figcaption>
@@ -242,7 +49,7 @@
   <p class="en">When we write the code, we call it craft. When somebody else does the exact same thing, we call it slop. A heroic 4,000-line PR on our side is a brutish 4,000-line PR on theirs.</p>
   <p class="zh">自己写的叫手艺，别人写的同样东西就叫 slop。我们这边是「英勇的 4000 行 PR」，对面就是「粗野的 4000 行 PR」。</p>
 </div>
-<h2 id="s2"><span class="en">2. Quality at volume</span><span class="zh">2. 产量爆炸之后，工作变成「质量 × 数量」</span></h2>
+<h2 id="s2"><span class="en">Quality and quantity</span><span class="zh">产量与质量</span></h2>
 <div class="pair">
   <p class="en">Last month I did something crazy: I shipped 3,000 pull requests to production.</p>
   <p class="zh">上个月我干了件疯狂的事：往生产环境合入了 3,000 个 pull request。</p>
@@ -303,7 +110,7 @@
   <p class="en">Most people get stuck in the low-trust loop: the agent writes slop code, a human verifies it, issues are found, repeat. You want the high-trust loop: the agent writes good code, and the agent verifies it.</p>
   <p class="zh">大多数人卡在低信任循环：Agent 写出 slop，人来验证，发现问题，再来一轮。你要去的是高信任循环：Agent 写出好代码，并且由 Agent 自己验证。</p>
 </div>
-<h2 id="s3"><span class="en">3. The poteto pyramid</span><span class="zh">3. poteto 倒金字塔：怎么信任 Agent</span></h2>
+<h2 id="s3"><span class="en">Trust the agent</span><span class="zh">如何信任 Agent</span></h2>
 <div class="pair">
   <p class="en">So let’s start by discussing how to move from low to high levels of trust. This inverted pyramid shows how I allocate time to my agents’ environments.</p>
   <p class="zh">先说怎么从低信任走到高信任。这张倒金字塔，是我把时间投在 Agent 环境上的方式。</p>
@@ -336,7 +143,7 @@
   <p class="en">Human review sits at the tip. It is the most expensive place to catch a mistake.</p>
   <p class="zh">最尖的那一层是人工审查。在这里抓错，成本最高。</p>
 </div>
-<h2 id="s4"><span class="en">4. Code is memory. Treat the codebase like a garden.</span><span class="zh">4. 代码库是记忆，也是花园</span></h2>
+<h2 id="s4"><span class="en">The codebase is memory</span><span class="zh">代码库是记忆</span></h2>
 <figure>
   <img src="slides/08-code-is-memory.jpg" alt="code is memory — the codebase is one of the largest inputs an agent sees.">
   <figcaption>
@@ -397,7 +204,7 @@
     <span class="zh">「带我过一遍这段代码。」是的，你有时还是得读代码。</span>
   </figcaption>
 </figure>
-<h2 id="s5"><span class="en">5. Dune, and why nuance tends to lead to slop</span><span class="zh">5. Dune：用架构消灭需要「分寸感」的 API</span></h2>
+<h2 id="s5"><span class="en">Design away the footguns</span><span class="zh">用架构约束 API</span></h2>
 <div class="pair">
   <p class="en">Okay, let’s look at real examples. Dune is a client framework we built for Grok Bot to implement this idea of organic architecture. Technically it is not that complicated. You can think of Dune as something like Next.js for Electron apps.</p>
   <p class="zh">看真实例子。Dune 是我们为 Grok Bot 做的客户端框架，用来落地「有机架构」。技术上并不复杂。你可以把它想成 Electron 应用的 Next.js。</p>
@@ -450,7 +257,7 @@
   <p class="en">These are simple linting rules that are easy to set up, but it means one less thing we need to think about when reviewing code.</p>
   <p class="zh">这些 lint 规则很简单，但意味着 code review 时又少想一件事。</p>
 </div>
-<h2 id="s6"><span class="en">6. Comments and markdown are escape hatches</span><span class="zh">6. 注释和 Markdown 是逃生舱</span></h2>
+<h2 id="s6"><span class="en">Markdown is an escape hatch</span><span class="zh">Markdown 是逃生舱</span></h2>
 <figure>
   <img src="slides/15-unsolicited-markdown.jpg" alt="Stop agents from writing unsolicited markdown. “I made it up.”">
   <figcaption>
@@ -523,7 +330,7 @@
   <p class="en">If you do this often enough, you will notice that there are fewer and fewer things to consider when reviewing code. At a certain point you realize there is nothing left to watch. And you can simply let agents merge most of their own pull requests themselves.</p>
   <p class="zh">你经常这样做，就会发现 code review 要盯的东西越来越少。到某个临界点，你会发现没什么要看了。然后就可以让 Agent 自己合入它们的大多数 PR。</p>
 </div>
-<h2 id="s7"><span class="en">7. Verification is the most important step</span><span class="zh">7. 验证是最重要的一步</span></h2>
+<h2 id="s7"><span class="en">Verification comes first</span><span class="zh">验证最重要</span></h2>
 <figure>
   <img src="slides/19-verification-most-important.jpg" alt="Verification is the most important step.">
   <figcaption>
@@ -628,7 +435,7 @@
   <p class="en">I created a new tool called /statechart in my pstack plugin that helps visualize state machines from a user’s perspective. It’s much easier for me to review this together with the videos and screenshots we provide.</p>
   <p class="zh">我在 pstack 插件里做了一个叫 /statechart 的工具，从用户视角可视化状态机。配上我们提供的视频和截图，审起来容易得多。</p>
 </div>
-<h2 id="s8"><span class="en">8. 11,000 PRs, and the revert rate went down</span><span class="zh">8. 11,000 个 PR，回滚率却在下降</span></h2>
+<h2 id="s8"><span class="en">Quality at scale</span><span class="zh">规模增长，质量提升</span></h2>
 <div class="pair">
   <p class="en">So, now let’s see what the promised paradise looks like. What do you get in return for all this investment?</p>
   <p class="zh">那么，这些投资换来的「应许之地」长什么样？</p>
@@ -701,7 +508,7 @@
   <p class="en">Keep in mind that Grok Bot remains an Electron application for now. There is a ceiling. But it is already much faster than many other agent interfaces that exist today. For an Electron app with such a high development speed and so many contributors, I’d say that’s pretty good.</p>
   <p class="zh">别忘了，Grok Bot 目前仍是 Electron 应用。天花板是有的。但它已经比现在很多 Agent 界面快得多。以这种开发速度和这么多贡献者，一个 Electron 应用能做成这样，我觉得相当不错。</p>
 </div>
-<h2 id="s9"><span class="en">9. Don’t automate a bad loop</span><span class="zh">9. 先修好内环，再去建软件工厂</span></h2>
+<h2 id="s9"><span class="en">Fix the inner loop</span><span class="zh">先修好内环</span></h2>
 <figure>
   <img src="slides/31-software-factory.jpg" alt="Should I build a software factory?">
   <figcaption>
@@ -771,9 +578,8 @@
   <p class="zh">我是 poteto，也叫 Lauren。再次感谢你们听完这场演讲。</p>
 </div>
 
-<footer>
+</div><footer class="article-footer">
   来源：<a href="https://www.youtube.com/watch?v=O_zcc6Xl12g">All Code Is Slop (Except Mine) — Lauren Tan, SpaceXSI</a> · AI Engineer Code Summit，2026 年 11 月 11 日，旧金山。
-</footer>
-</div>
-</body>
-</html>
+</footer></article>
+<aside class="right-rail" aria-label="Contents"><p class="rail-label">On this page</p><nav class="contents"><a href="#s1">开场</a><a href="#s2">产量与质量</a><a href="#s3">信任 Agent</a><a href="#s4">代码库</a><a href="#s5">架构设计</a><a href="#s6">说明与注释</a><a href="#s7">验证</a><a href="#s8">规模化质量</a><a href="#s9">先修内环</a></nav></aside></main>
+<script>const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;if(!reduced&&'IntersectionObserver'in window){document.documentElement.classList.add('motion-ready');document.querySelectorAll('.article-content h2,.article-content figure').forEach(el=>el.dataset.reveal='');const reveal=new IntersectionObserver((entries,obs)=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('is-visible');obs.unobserve(e.target)}}),{threshold:.08,rootMargin:'0px 0px -30px'});document.querySelectorAll('[data-reveal]').forEach(el=>reveal.observe(el));const links=[...document.querySelectorAll('.contents a')];const active=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)links.forEach(a=>a.toggleAttribute('aria-current',a.hash==='#'+e.target.id))}),{rootMargin:'-8% 0px -78%'});document.querySelectorAll('.article-content h2[id]').forEach(el=>active.observe(el))}</script></body></html>
