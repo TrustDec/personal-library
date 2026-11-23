@@ -1,82 +1,13 @@
 <!doctype html>
 <html lang="zh-CN">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="A personal library of ideas worth keeping.">
-  <title>Personal Library</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root { color-scheme: light; --paper:#f8f7f2; --ink:#22211e; --muted:#77736c; --line:#dedbd2; --accent:#c76545; --serif:"Newsreader",Georgia,"Songti SC",serif; --sans:"DM Sans","Noto Sans SC","PingFang SC",sans-serif; }
-    * { box-sizing:border-box; }
-    html { scroll-behavior:smooth; }
-    body { margin:0; background:var(--paper); color:var(--ink); font-family:var(--sans); -webkit-font-smoothing:antialiased; }
-    a { color:inherit; }
-    .site-nav { width:min(1240px,calc(100% - 64px)); margin:auto; height:82px; display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid var(--line); }
-    .brand { display:inline-flex; align-items:center; gap:12px; text-decoration:none; font-size:14px; font-weight:600; letter-spacing:-.02em; }
-    .brand-mark { width:29px; height:29px; display:grid; place-items:center; border-radius:50%; background:var(--ink); color:var(--paper); font:500 15px var(--serif); }
-    .nav-meta { color:var(--muted); font-size:12px; letter-spacing:.08em; text-transform:uppercase; }
-    main { width:min(1100px,calc(100% - 64px)); margin:0 auto; }
-    .hero { position:relative; min-height:400px; display:flex; flex-direction:column; justify-content:center; padding:76px 0 72px; overflow:hidden; }
-    .hero::after { content:""; position:absolute; width:380px; height:380px; top:22px; right:6%; border-radius:50%; background:radial-gradient(circle at 45% 45%,rgba(224,144,111,.16),rgba(224,144,111,0) 68%); pointer-events:none; animation:orb-drift 10s ease-in-out infinite alternate; }
-    .eyebrow { position:relative; z-index:1; margin:0 0 24px; color:var(--accent); font-size:12px; font-weight:600; letter-spacing:.16em; text-transform:uppercase; animation:rise-in .7s both; }
-    h1 { position:relative; z-index:1; max-width:1080px; margin:0; font:400 clamp(3.4rem,8vw,6.4rem)/1.06 var(--serif); letter-spacing:-.032em; animation:rise-in .8s .08s both; }
-    h1 span { display:block; color:var(--accent); font-style:italic; }
-    .hero-copy { position:relative; z-index:1; max-width:460px; margin:27px 0 0; color:var(--muted); font-size:15px; line-height:1.8; animation:rise-in .8s .16s both; }
-    .collection { padding:28px 0 90px; border-top:1px solid var(--line); }
-    .collection-head { display:flex; align-items:baseline; justify-content:space-between; margin-bottom:20px; }
-    .collection-head h2 { margin:0; font-size:13px; font-weight:600; letter-spacing:.08em; text-transform:uppercase; }
-    .count { color:var(--muted); font-size:12px; }
-    .story { position:relative; display:grid; grid-template-columns:minmax(0,1fr) 200px; gap:38px; align-items:center; min-height:224px; padding:34px 38px; overflow:hidden; border:1px solid var(--line); border-radius:6px; text-decoration:none; background:#f1efe8; transition:transform .35s cubic-bezier(.2,.75,.25,1),border-color .3s,background .3s; }
-    .story:hover { transform:translateY(-4px); border-color:#c9c2b5; background:#f3f0e8; }
-    .story-copy { position:relative; z-index:1; }
-    .story-date { margin:0 0 14px; color:var(--muted); font-size:11px; letter-spacing:.08em; text-transform:uppercase; }
-    .story h3 { max-width:620px; margin:0; font:400 clamp(2rem,4vw,3rem)/1.05 var(--serif); letter-spacing:-.02em; }
-    .story-subtitle { margin:5px 0 0; color:var(--accent); font:italic 1.25rem/1.2 var(--serif); }
-    .story-description { max-width:510px; margin:13px 0 0; color:#625f59; font-size:13px; line-height:1.7; }
-    .story-art { position:relative; width:190px; aspect-ratio:1; justify-self:end; border-radius:50%; background:radial-gradient(circle at 50% 45%,#edc3a9 0 19%,#d99070 20% 21%,#f5e2ce 22% 38%,#e9c8ac 39% 40%,transparent 41%),linear-gradient(145deg,#e6e0d3,#f1eadf); transition:transform .6s cubic-bezier(.2,.75,.25,1); }
-    .story-art::before,.story-art::after { content:""; position:absolute; inset:17%; border:1px solid rgba(106,75,55,.24); border-radius:50%; transform:rotate(-28deg) scaleX(.58); }
-    .story-art::after { transform:rotate(42deg) scaleX(.58); }
-    .story:hover .story-art { transform:rotate(8deg) scale(1.04); }
-    .story-arrow { position:absolute; right:35px; bottom:28px; width:38px; height:38px; display:grid; place-items:center; border:1px solid var(--line); border-radius:50%; font-size:18px; transition:color .25s,background .25s,transform .25s; }
-    .story:hover .story-arrow { color:#fff; background:var(--accent); border-color:var(--accent); transform:translate(2px,-2px); }
-    footer { display:flex; justify-content:space-between; padding:22px 0 30px; border-top:1px solid var(--line); color:var(--muted); font-size:11px; }
-    @keyframes rise-in { from { opacity:0; transform:translateY(18px); } to { opacity:1; transform:translateY(0); } }
-    @keyframes orb-drift { from { transform:translate3d(0,0,0) scale(.96); } to { transform:translate3d(22px,-12px,0) scale(1.04); } }
-    @media(max-width:720px) { .site-nav,main { width:calc(100% - 40px); } .site-nav { height:68px; } .nav-meta { font-size:10px; } h1 { font-size:clamp(2.3rem,11vw,3.2rem); } .hero { min-height:350px; padding:58px 0; } .hero::after { width:270px;height:270px;right:-30%;top:34px; } .story { grid-template-columns:minmax(0,1fr) 80px; gap:12px; min-height:190px; padding:25px 22px 60px; } .story-art { width:78px; align-self:start; margin-top:20px; } .story-arrow { right:20px; bottom:16px; } .story-description { font-size:12px; } .collection { padding-bottom:56px; } }
-    @media(prefers-reduced-motion:reduce) { *,*::before,*::after { scroll-behavior:auto!important; animation-duration:.01ms!important; animation-iteration-count:1!important; transition-duration:.01ms!important; } }
-  </style>
-</head>
-<body>
-  <nav class="site-nav" aria-label="Main navigation">
-    <a class="brand" href="./"><span class="brand-mark">P</span><span>Personal Library</span></a>
-    <span class="nav-meta">A quiet place for ideas</span>
-  </nav>
-  <main>
-    <header class="hero">
-      <p class="eyebrow">Ideas · Work · Culture</p>
-      <h1>Worth keeping.<span>Worth revisiting.</span></h1>
-      <p class="hero-copy">A personal library of talks, ideas, and notes that stay with you.</p>
-    </header>
-    <section class="collection" aria-labelledby="collection-title">
-      <div class="collection-head">
-        <h2 id="collection-title">The collection</h2>
-        <span class="count">01 — 01</span>
-      </div>
-      <a class="story" href="library/all-code-is-slop/">
-        <div class="story-copy">
-          <p class="story-date">Nov 11, 2026&nbsp;&nbsp; · &nbsp;&nbsp;AI &amp; software</p>
-          <h3>All Code Is Slop</h3>
-          <p class="story-subtitle">— Except mine</p>
-          <p class="story-description">Lauren Tan on building software at a new scale without losing quality.</p>
-        </div>
-        <div class="story-art" aria-hidden="true"></div>
-        <span class="story-arrow" aria-hidden="true">↗</span>
-      </a>
-    </section>
-    <footer><span>Personal Library</span><span>Collected over time</span></footer>
-  </main>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Library</title>
+    <meta name="description" content="值得反复读的演讲、想法与笔记。英文一行，中文一行，关键画面穿插在对应位置。" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
