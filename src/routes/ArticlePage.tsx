@@ -1,7 +1,8 @@
-import { Link, data, useLoaderData, type LoaderFunctionArgs } from "react-router";
+import { data, useLoaderData, type LoaderFunctionArgs } from "react-router";
 import { getArticle, type HeadingBlock } from "../articles/catalog";
 import { ArticleContent } from "../components/ArticleContent";
-import { SiteBar } from "../components/SiteBar";
+import { ArticleNav } from "../components/ArticleNav";
+import { useActiveHeading } from "../lib/useActiveHeading";
 
 export function loader({ params }: LoaderFunctionArgs) {
   const article = getArticle(params.slug ?? "");
@@ -16,16 +17,34 @@ export function ArticlePage() {
   const headings = article.blocks.filter(
     (block): block is HeadingBlock => block.type === "heading",
   );
+  const headingIds = headings.map((heading) => heading.id);
+  const active = useActiveHeading(headingIds);
   const kicker = [article.event, article.location, article.date].join(" · ");
   const [minutes, seconds] = article.duration.split(":");
 
   return (
-    <>
+    <div className="reading">
       <title>{`${article.titleEn} · Personal Library`}</title>
-      <meta name="description" content={article.note} />
-      <SiteBar current={article.titleEn} />
-      <article className="wrap article">
-        <header className="hero">
+      <meta name="description" content={article.titleZh} />
+
+      <div className="reading-mobile">
+        <details>
+          <summary>馆藏</summary>
+          <ArticleNav current={article.slug} />
+        </details>
+        <details>
+          <summary>目录</summary>
+          <Toc headings={headings} active={active} />
+        </details>
+      </div>
+
+      <aside className="rail rail-left">
+        <p className="rail-label">馆藏</p>
+        <ArticleNav current={article.slug} />
+      </aside>
+
+      <article className="article">
+        <header className="article-hero">
           <p className="kicker">{kicker}</p>
           <h1>
             {article.titleEn}
@@ -34,28 +53,42 @@ export function ArticlePage() {
           <p className="meta">
             {article.speaker} · {article.role}
             <br />
-            原片 {Number(minutes)} 分 {seconds} 秒 · 中英对照图文 · 幻灯片截自原视频
+            原片 {Number(minutes)} 分 {seconds} 秒
           </p>
         </header>
-        <div className="note">{article.note}</div>
-        <nav className="toc">
-          <strong>目录</strong>
-          {headings.map((heading) => (
-            <a key={heading.id} href={`#${heading.id}`}>
-              {heading.zh}
-            </a>
-          ))}
-        </nav>
         <ArticleContent slug={article.slug} blocks={article.blocks} />
-        <footer>
+        <footer className="article-footer">
           来源：<a href={article.source}>{article.sourceLabel}</a>
           {` · ${article.event}，${article.date}，${article.location}。`}
-          <br />
-          英文按现场口播整理，数字以幻灯片为准。中文为对照翻译。
-          <br />
-          本页是 <Link to="/">Personal Library</Link> 中的一篇。
         </footer>
       </article>
-    </>
+
+      <aside className="rail rail-right">
+        <p className="rail-label">目录</p>
+        <Toc headings={headings} active={active} />
+      </aside>
+    </div>
+  );
+}
+
+function Toc({
+  headings,
+  active,
+}: {
+  headings: HeadingBlock[];
+  active: string;
+}) {
+  return (
+    <nav className="toc" aria-label="文章目录">
+      {headings.map((heading) => (
+        <a
+          key={heading.id}
+          href={`#${heading.id}`}
+          aria-current={heading.id === active ? "location" : undefined}
+        >
+          {heading.zh}
+        </a>
+      ))}
+    </nav>
   );
 }

@@ -1,5 +1,5 @@
 import { Link, isRouteErrorResponse, useRouteError } from "react-router";
-import { SiteBar } from "../components/SiteBar";
+import { Nav } from "../components/Nav";
 
 export function NotFoundPage() {
   return (
@@ -8,6 +8,7 @@ export function NotFoundPage() {
       kicker="404"
       heading="没有这篇"
       lede="这个地址不在馆藏里。"
+      withNav={false}
     />
   );
 }
@@ -15,7 +16,15 @@ export function NotFoundPage() {
 export function RouteErrorPage() {
   const error = useRouteError();
   if (isRouteErrorResponse(error) && error.status === 404) {
-    return <NotFoundPage />;
+    return (
+      <MissingScreen
+        title="未找到 · Personal Library"
+        kicker="404"
+        heading="没有这篇"
+        lede="这个地址不在馆藏里。"
+        withNav
+      />
+    );
   }
   return (
     <MissingScreen
@@ -23,6 +32,7 @@ export function RouteErrorPage() {
       kicker="Error"
       heading="页面出了问题"
       lede="刷新试试，或回到首页。"
+      withNav
     />
   );
 }
@@ -32,26 +42,26 @@ function MissingScreen({
   kicker,
   heading,
   lede,
+  withNav,
 }: {
   title: string;
   kicker: string;
   heading: string;
   lede: string;
+  withNav: boolean;
 }) {
   return (
     <>
       <title>{title}</title>
-      <SiteBar />
-      <div className="wrap">
-        <header className="hero">
-          <p className="kicker">{kicker}</p>
-          <h1>{heading}</h1>
-          <p className="lede">{lede}</p>
-        </header>
-        <p className="empty">
-          <Link to="/">回到 Personal Library</Link>
-        </p>
-      </div>
+      {withNav ? <Nav /> : null}
+      <main className="missing">
+        <p className="kicker">{kicker}</p>
+        <h1>{heading}</h1>
+        <p className="lede">{lede}</p>
+        <Link className="btn btn-primary" to="/">
+          回到首页
+        </Link>
+      </main>
     </>
   );
 }

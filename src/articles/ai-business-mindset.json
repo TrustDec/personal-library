@@ -1,0 +1,318 @@
+{
+  "slug": "ai-business-mindset",
+  "titleEn": "AI Business Mindset",
+  "titleZh": "AI 商业心智：2027 怎么用 AI 赚钱",
+  "speaker": "Dan Martell",
+  "role": "Author of Buy Back Your Time · Martell Ventures",
+  "event": "Martell on Business",
+  "location": "YouTube",
+  "date": "2026-11-18",
+  "duration": "08:57",
+  "cover": "05-learning-loops.jpg",
+  "source": "https://www.youtube.com/watch?v=EvHCjb3JPp8",
+  "sourceLabel": "If You Want To Make Money With AI In 2027 — Dan Martell",
+  "blocks": [
+    {
+      "type": "heading",
+      "id": "s1",
+      "en": "1. It is not the tools",
+      "zh": "1. 开场：不是工具，是你怎么排优先级"
+    },
+    {
+      "type": "slide",
+      "file": "00-title.jpg",
+      "alt": "Whiteboard title: AI Business Mindset.",
+      "time": "00:05",
+      "en": "Whiteboard title: AI Business Mindset.",
+      "zh": "白板标题：AI Business Mindset。"
+    },
+    {
+      "type": "pair",
+      "en": "People think it's the tools, they think it's the models, they think it's the AI, but it's actually the way you're interpreting the information and prioritizing it that's going to make it a game changer for you or not.",
+      "zh": "大家以为关键是工具、是模型、是 AI 本身。真正让它变成胜负手的，是你怎么解读信息、怎么排优先级。"
+    },
+    {
+      "type": "pair",
+      "en": "There's a lot of people out there that use AI and they use it the wrong way, and they will not grow or make money because of it.",
+      "zh": "很多人在用 AI，但用错了方向，所以既长不大，也赚不到钱。"
+    },
+    {
+      "type": "heading",
+      "id": "s2",
+      "en": "2. AI = dumb shit faster",
+      "zh": "2. 第一条：AI = 把蠢事做更快"
+    },
+    {
+      "type": "slide",
+      "file": "01-dumb-shit-faster.jpg",
+      "alt": "Writing point 1: AI = Dumb Shit Faster.",
+      "time": "00:40",
+      "en": "Point 1 on the board: AI = Dumb Shit Faster.",
+      "zh": "白板上第一条：AI = Dumb Shit Faster。"
+    },
+    {
+      "type": "pair",
+      "en": "One of the first beliefs and philosophies I have to share with you — number one out of five — is that most people use AI to do dumb shit faster.",
+      "zh": "我要讲的五条心智里，第一条是：大多数人用 AI，只是把蠢事做更快。"
+    },
+    {
+      "type": "pair",
+      "en": "And that is not the way we win. We don't do the wrong thing faster, we do the right thing.",
+      "zh": "那不是赢的方式。我们不是把错的事做更快，我们做对的事。"
+    },
+    {
+      "type": "pair",
+      "en": "And to do that, you need to understand what a constraint is. Every business at any point in time only has one primary constraint.",
+      "zh": "要做到这一点，你得懂什么叫约束。任何一家公司，在任何一个时点，只有一个主约束。"
+    },
+    {
+      "type": "pair",
+      "en": "If you identify it using AI, then you can surge your whole team on solving that problem.",
+      "zh": "用 AI 把它找出来，你就可以把整个团队压到这一个问题上。"
+    },
+    {
+      "type": "pair",
+      "en": "That mindset is a shift, because most people — I teach them some of these powerful AI technologies — and they just keep doing the wrong thing faster. And their business doesn't grow, and their gross margins don't grow.",
+      "zh": "这是一次心智转换。很多人我教了他们很强的 AI 技术，他们还是把错的事做更快。公司不增长，毛利率也不增长。"
+    },
+    {
+      "type": "heading",
+      "id": "s3",
+      "en": "3. You + AI > team + AI",
+      "zh": "3. 第二条：你 + AI 大于团队 + AI"
+    },
+    {
+      "type": "slide",
+      "file": "02-you-plus-ai.jpg",
+      "alt": "Board points 1 and 2: You+AI > Team+AI.",
+      "time": "01:36",
+      "en": "Point 2: You + AI > Team + AI.",
+      "zh": "第二条：You + AI > Team + AI。"
+    },
+    {
+      "type": "pair",
+      "en": "The second big mindset shift is you plus AI over your team plus AI.",
+      "zh": "第二个大转换：你加 AI，大于你的团队加 AI。"
+    },
+    {
+      "type": "pair",
+      "en": "I know you want your team to grow, but your team adoption is a byproduct of your adoption.",
+      "zh": "我知道你希望团队成长，但团队用不用 AI，是你自己用不用的副产品。"
+    },
+    {
+      "type": "pair",
+      "en": "I've coached many incredible business owners doing 10 million, 25 million, 50 million on the advanced ways to use AI — to extract large amounts of demand, automate sales and processes and delivery so they can create profit — and they still default to their team.",
+      "zh": "我辅导过很多做到一千万、两千五百万、五千万美金的老板，教他们用 AI 挖需求、把销售、流程和交付自动化来做利润。他们还是默认把事丢给团队。"
+    },
+    {
+      "type": "pair",
+      "en": "When I tell them: your team is following your lead. You are the bottleneck, not your team.",
+      "zh": "我会说：团队在跟你的节奏。瓶颈是你，不是他们。"
+    },
+    {
+      "type": "pair",
+      "en": "So I encourage you to create space in your calendar to dedicate to your learning, to your growth, to you becoming that person for your team. Big theme, big principle. Don't let it go unnoticed.",
+      "zh": "所以请在日历里留出时间，专门给你自己的学习和成长，让你先成为团队需要的那个人。这是大原则，别当没看见。"
+    },
+    {
+      "type": "heading",
+      "id": "s4",
+      "en": "4. Role engineering over prompt engineering",
+      "zh": "4. 第三条：角色工程大于提示词工程"
+    },
+    {
+      "type": "slide",
+      "file": "03-role-eng.jpg",
+      "alt": "Point 3 on the board: Role Eng > Prompt Eng.",
+      "time": "02:56",
+      "en": "Point 3: Role Eng > Prompt Eng.",
+      "zh": "第三条：Role Eng > Prompt Eng。"
+    },
+    {
+      "type": "pair",
+      "en": "Number three, the big shift in the mindset of AI, is role engineering over prompt engineering.",
+      "zh": "第三条，AI 心智的大转换：角色工程，大于提示词工程。"
+    },
+    {
+      "type": "pair",
+      "en": "The whole world of AI shifted, I believe, when the agents started getting hosted by some of these large models — like Grok Bot, like ChatGPT Dots, like Claude Duet that just came out and is not readily available for most people. And we're seeing this with Muse and Instinct.",
+      "zh": "我觉得 AI 的世界变了，是从大模型开始托管 Agent 开始的：Grok Bot、ChatGPT Dots，还有刚出来、大多数人还用不上的 Claude Duet。Muse 和 Instinct 也是这条线。"
+    },
+    {
+      "type": "pair",
+      "en": "When people go, hey Dan, how do I get my AI to do smarter things? I go: who would you want to hire next to give you the most bandwidth in your business — what role?",
+      "zh": "有人问：Dan，怎么让我的 AI 更聪明？我说：你下一步最想招谁，好给你腾出带宽？那个角色是什么？"
+    },
+    {
+      "type": "pair",
+      "en": "Then I ask them to define what that person would do. As they're defining it to me, if they pulled out their phone and talked to their Grok Bot, their Claude Duet, their ChatGPT Dots, they would learn quickly that all they're doing is defining the role, not the prompts, for the AI to execute on their behalf.",
+      "zh": "然后让他们定义这个人会干什么。他们一边说，一边拿出手机跟 Grok Bot、Claude Duet、ChatGPT Dots 讲，很快就会发现：自己在定义的是角色，不是提示词，好让 AI 替他们执行。"
+    },
+    {
+      "type": "pair",
+      "en": "That is a massive mind shift that most people out there — the amateurs — will never get results from, because they're still stuck here. They're still stuck in February 2026, which is not long ago, but that's how much it's changed.",
+      "zh": "这是一次巨大的转换。外面大多数业余玩家拿不到结果，是因为还卡在这里。还卡在 2026 年 2 月。那才没多久，变化已经这么大。"
+    },
+    {
+      "type": "pair",
+      "en": "As you think about your rollout around the mindset of AI, please consider that your responsibility today as a CEO, a business owner, is to get better at role definition of your agents. You got to get good at defining it.",
+      "zh": "你在推 AI 的时候请记住：今天你作为 CEO、作为老板的责任，是把 Agent 的角色定义练好。你得会定义。"
+    },
+    {
+      "type": "pair",
+      "en": "The reason a lot of you struggle with scaling your companies: you can't define the roles that would come into your business to help you unblock your number one constraint.",
+      "zh": "很多人公司规模化不了，就是因为定义不出那些能进来、帮你打掉第一约束的角色。"
+    },
+    {
+      "type": "heading",
+      "id": "s5",
+      "en": "5. Data equity",
+      "zh": "5. 第四条：数据股权"
+    },
+    {
+      "type": "slide",
+      "file": "04-data-equity.jpg",
+      "alt": "Point 4 on the board: Data Equity.",
+      "time": "05:20",
+      "en": "Point 4: Data Equity.",
+      "zh": "第四条：Data Equity。"
+    },
+    {
+      "type": "pair",
+      "en": "The next one is this concept I call data equity. Equity in the world of AI comes down to the quality of your data.",
+      "zh": "下一条我叫数据股权。在 AI 的世界里，股权落到实处，就是你的数据质量。"
+    },
+    {
+      "type": "pair",
+      "en": "Access to the same models and the same tools that everybody else has doesn't give you an advantage. Where is the opportunity? The opportunity is in you cleaning up and verifying the data so you can feed these models, so they can take an idea all the way to a completed goal without a person involved.",
+      "zh": "大家都用同一套模型、同一套工具，这给你带不来优势。机会在哪？在你把数据洗干净、核验好，喂给模型，让它能把一个想法一路做到完成的目标，中间不用人插手。"
+    },
+    {
+      "type": "pair",
+      "en": "A friend the other day asked me how he manages his whole sales process: before they even get on a call there's an intake form, then a sales conversation, then they sign an agreement, then they onboard them, then they put them in the system. I said, well, do you have examples of those steps? And he's like, no.",
+      "zh": "前几天一个朋友问我，他整条销售流程怎么管：还没上电话就有 intake 表，然后销售对话，然后签协议，然后 onboarding，再进系统。我问：这些步骤你有样本吗？他说没有。"
+    },
+    {
+      "type": "pair",
+      "en": "The problem is: if you don't have the data defined and cleaned up, and you don't have examples you can give it so it can use its heat-seeking missile of execution, then you don't have value — which is the equity part.",
+      "zh": "问题就在这：数据没定义、没洗干净，也没有能喂给它的样本，它那套「热寻导弹式」的执行就用不上。那你就没有价值——这就是股权那一层。"
+    },
+    {
+      "type": "pair",
+      "en": "Every business needs to start asking: how do I create data equity inside my business? Because that's what's going to make you valuable to a potential buyer. That's what's going to make the AI actually get the work done for you.",
+      "zh": "每家公司都该开始问：我怎么在内部做出数据股权？这会让你对潜在买家更有价值，也会让 AI 真的把活干完。"
+    },
+    {
+      "type": "heading",
+      "id": "s6",
+      "en": "6. Learning loops",
+      "zh": "6. 第五条：学习闭环"
+    },
+    {
+      "type": "slide",
+      "file": "05-learning-loops.jpg",
+      "alt": "Complete board with Learning Loops circled and a Feedback loop drawn to the right.",
+      "time": "07:12",
+      "en": "Point 5, circled: Learning Loops, with a Feedback cycle drawn beside it.",
+      "zh": "第五条被圈出来：Learning Loops，旁边画了 Feedback 循环。"
+    },
+    {
+      "type": "pair",
+      "en": "The last one, and definitely not the least, is learning loops.",
+      "zh": "最后一条，但绝不是最不重要的：学习闭环。"
+    },
+    {
+      "type": "pair",
+      "en": "People tell me all the time, Dan, I got bots, I got bots. I said, no you don't. You have automation. You don't have a bot and you don't have an agent unless you have a learning loop.",
+      "zh": "老有人跟我说：Dan，我有 bots，我有 bots。我说：你没有。你只有自动化。没有学习闭环，你就既没有 bot，也没有 agent。"
+    },
+    {
+      "type": "pair",
+      "en": "A learning loop is a process where you define an outcome, it generates the results, and at one point there is feedback. That feedback is fed back into the initial prompt, and then it executes the steps in the process with that new knowledge, so that it gets better and better and better.",
+      "zh": "学习闭环是：你定义结果，它产出，中间某个点有反馈。反馈再喂回最初的提示词，它带着新知识把流程再跑一遍，于是越来越好。"
+    },
+    {
+      "type": "pair",
+      "en": "So if you have any agents or bots in your company and your team is not giving it feedback on its work, then you don't truly have an ability to get better over time.",
+      "zh": "所以公司里如果有 agent 或 bot，而团队不给它工作反馈，你就没有随时间变强的能力。"
+    },
+    {
+      "type": "pair",
+      "en": "That is how the best companies are scaling with AI: by understanding that an agent is not an agent without a learning loop, and creating the process.",
+      "zh": "最会用 AI 做规模的公司，就是懂这一点：没有学习闭环就不是 agent，然后把这个过程做出来。"
+    },
+    {
+      "type": "pair",
+      "en": "A simple example: have your agent do some kind of analysis, post it into Slack, ask your team for feedback on the analysis, and tell your agent to monitor those posts, take the feedback, and treat it as opportunities to upgrade its brain, its rules, its steps, its process, its quality.",
+      "zh": "一个简单例子：让 agent 做分析，发到 Slack，让团队给反馈；再告诉 agent 去盯这些帖，把反馈当成升级大脑、规则、步骤、流程和质量的机会。"
+    },
+    {
+      "type": "pair",
+      "en": "If your team is looking at the output, giving it the feedback, and you're feeding that to the agent every week — 52 times a year — it can get better and better and better. That also informs your data equity. Do you see how these all stack on top of each other?",
+      "zh": "团队看产出、给反馈，你每周把反馈喂回去，一年 52 次，它就会越来越强。这也在喂你的数据股权。看见没有，这五条是叠在一起的。"
+    },
+    {
+      "type": "heading",
+      "id": "s7",
+      "en": "7. They stack — and 2027 is the separator",
+      "zh": "7. 五条叠在一起，2027 会把公司和业余玩家分开"
+    },
+    {
+      "type": "pair",
+      "en": "When we know that AI today is still allowing most business owners to do the wrong thing or the dumb thing faster; that we have to develop our skills and understanding of this over our team, because our team can never outgrow our ability — we are the leaders, or the lids; that we need to get better at defining the roles of our agents; that we have to understand the data side — is it good, do we have great examples, do we know what a win looks like, do we know what success looks like; and then build those learning loops into our processes — that is how we make a lot of money.",
+      "zh": "今天的 AI，还是在让大多数老板把错的事、蠢的事做更快。我们得先把自己的技能和理解练到团队前面，因为团队超不过我们——我们是领导者，也是盖子。我们要把 Agent 的角色定义练好，要把数据这一侧搞清楚：数据好不好、有没有好样本、赢长什么样、成功长什么样。然后再把学习闭环做进流程。这样才会赚大钱。"
+    },
+    {
+      "type": "slide",
+      "file": "06-separator.jpg",
+      "alt": "Recap at the complete board: 2027 as the separator.",
+      "time": "08:16",
+      "en": "The five points stacked. 2027 is the separator.",
+      "zh": "五条叠完。2027 是分界线。"
+    },
+    {
+      "type": "pair",
+      "en": "That's how you win. And it is no longer optional. 2027 will be the separator between the companies that decide to go pro and the amateurs that eventually go out of business.",
+      "zh": "这样才会赢。而且已经不是可选项。2027 会把决定成为专业玩家的公司，和最终出局的业余玩家分开。"
+    },
+    {
+      "type": "pair",
+      "en": "When we think about every company now becoming an AI software company — it's not SaaS, it's not software as a service, it's your service as a software.",
+      "zh": "每家公司现在都在变成 AI 软件公司。不是 SaaS，不是软件即服务，是你的服务变成软件。"
+    },
+    {
+      "type": "pair",
+      "en": "It's the problem you solve for the market. Get really good at that messaging, and then on the back end use this to deliver at a higher rate, at a higher quality, so that you increase your gross margin because you don't have to hire a bunch of people.",
+      "zh": "你解决市场的那个问题，把那套话说清楚；后端再用这一套，用更高的速度和更高的质量交付，毛利率上去，因为你不用招一大堆人。"
+    },
+    {
+      "type": "pair",
+      "en": "You keep the people doing the people stuff, you use the AI to do the computer stuff, and all of a sudden you make a lot of money.",
+      "zh": "人做人事，AI 做计算机的事，钱就来了。"
+    },
+    {
+      "type": "heading",
+      "id": "s8",
+      "en": "8. Scale Workbook",
+      "zh": "8. 片尾：Scale Workbook"
+    },
+    {
+      "type": "slide",
+      "file": "07-workbook.jpg",
+      "alt": "Dan Martell sitting with the Scale Your Business Workbook cover.",
+      "time": "08:48",
+      "en": "Close: Scale Your Business Workbook.",
+      "zh": "收尾：Scale Your Business Workbook。"
+    },
+    {
+      "type": "pair",
+      "en": "Real quick, you've made it to the end. Let me tell you what I know about you. You're not somebody that's looking to do shelf help. You're not somebody that's just doom scrolling on social media. You're here because you want to build a real business, and you're sick and tired of not getting the real insights to grow inside your business.",
+      "zh": "你看到这里了。你不是那种买了书往书架上一放的人，也不是在社交网络上刷焦虑的人。你是想把一家真公司做起来，而且受够了在公司内部拿不到真洞察。"
+    },
+    {
+      "type": "pair",
+      "en": "So I want to help you avoid all the pain of figuring this out the hard way like I did. That's why I put together everything I've ever learned into the Scale Workbook. It's the internal document I use with every founder I work with that turns a chaotic business into a money-making machine, teaching you all of this without burning more hours. It's totally free. The link is in the description, or you can scan the QR code on the screen, because I'm here to help you build your empire.",
+      "zh": "所以我想帮你避开我当年那种苦学。我把学过的东西收进 Scale Workbook。这是我跟每个创始人用的内部文件，把一团乱的生意变成赚钱机器，又不用你再烧更多时间。完全免费。链接在简介里，也可以扫屏幕上的二维码。我是来帮你把帝国做起来的。"
+    }
+  ]
+}

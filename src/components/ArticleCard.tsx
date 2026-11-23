@@ -7,10 +7,10 @@ export function ArticleCard({ article }: { article: Article }) {
 
   return (
     <Link className="card" to={articleHref(article.slug)}>
-      <img src={slideSrc(article.slug, article.cover)} alt={article.titleEn} />
+      <img src={slideSrc(article.slug, article.cover)} alt="" />
       <div className="body">
         <p className="kicker">{kicker}</p>
-        <h2>{article.titleEn}</h2>
+        <h3>{article.titleEn}</h3>
         <p className="zh">{article.titleZh}</p>
         <p className="meta">{meta}</p>
       </div>

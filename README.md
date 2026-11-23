@@ -32,4 +32,4 @@ src/
 public/articles/        幻灯片
 ```
 
-新增一篇：在 `src/articles/` 加 JSON，写入 `catalog.ts` 的列表，图片放到 `public/articles/<slug>/slides/`。
+新增一篇：在 `src/articles/` 加 JSON，写入 `catalog.ts` 的列表，图片放到 `public/articles/<slug>/slides/`。阅读页只放讲稿和图；不要 `note` 字段，页脚只保留来源。

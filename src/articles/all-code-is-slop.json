@@ -11,7 +11,6 @@
   "cover": "01-title.jpg",
   "source": "https://www.youtube.com/watch?v=O_zcc6Xl12g",
   "sourceLabel": "All Code Is Slop (Except Mine) — Lauren Tan, SpaceXSI",
-  "note": "英文按现场讲稿整理（已修正自动字幕里的 Potato / Graph Bot / SpaceX SI 等识别错误）。中文逐段对照，方便双语阅读。数字以幻灯片为准：她个人 10 月合入 3,127 个 PR；Grok Bot 团队 10 月合入 10,926 个 PR；回滚提交占比从 6 月 0.98% 降到 10 月 0.47%。",
   "blocks": [
     {
       "type": "heading",

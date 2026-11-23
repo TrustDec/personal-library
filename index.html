@@ -4,7 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Personal Library</title>
-    <meta name="description" content="值得反复读的演讲、想法与笔记。英文一行，中文一行，关键画面穿插在对应位置。" />
+    <meta name="description" content="Personal Library" />
+    <script>
+      (function () {
+        var stored = localStorage.getItem("theme");
+        var theme = stored === "light" || stored === "dark"
+          ? stored
+          : (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+        document.documentElement.dataset.theme = theme;
+      })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600&family=Noto+Serif+SC:wght@500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&display=swap" rel="stylesheet" />
   </head>
   <body>
     <div id="root"></div>

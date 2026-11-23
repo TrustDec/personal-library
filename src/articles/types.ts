@@ -35,6 +35,5 @@ export type Article = {
   cover: string;
   source: string;
   sourceLabel: string;
-  note: string;
   blocks: Block[];
 };

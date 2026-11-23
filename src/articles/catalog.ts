@@ -1,7 +1,8 @@
+import rawAiBusinessMindset from "./ai-business-mindset.json";
 import rawAllCodeIsSlop from "./all-code-is-slop.json";
 import type { Article, Block } from "./types";
 
-export type { Article, Block, HeadingBlock } from "./types";
+export type { Article, Block, HeadingBlock, PairBlock, SlideBlock } from "./types";
 
 function isRecord(value: unknown): value is Record<string, unknown> {
   return typeof value === "object" && value !== null && !Array.isArray(value);
@@ -67,12 +68,14 @@ function parseArticle(raw: unknown): Article {
     cover: requiredString(raw, "cover"),
     source: requiredString(raw, "source"),
     sourceLabel: requiredString(raw, "sourceLabel"),
-    note: requiredString(raw, "note"),
     blocks: raw.blocks.map(parseBlock),
   };
 }
 
-export const articles: Article[] = [parseArticle(rawAllCodeIsSlop)];
+export const articles: Article[] = [
+  parseArticle(rawAiBusinessMindset),
+  parseArticle(rawAllCodeIsSlop),
+];
 
 export function getArticle(slug: string): Article | undefined {
   return articles.find((article) => article.slug === slug);
