@@ -1,5 +1,6 @@
 import rawAiBusinessMindset from "./ai-business-mindset.json";
 import rawAllCodeIsSlop from "./all-code-is-slop.json";
+import rawDeepWorkRoutine from "./deep-work-routine.json";
 import type { Article, Block } from "./types";
 
 export type { Article, Block, HeadingBlock, PairBlock, SlideBlock } from "./types";
@@ -73,6 +74,7 @@ function parseArticle(raw: unknown): Article {
 }
 
 export const articles: Article[] = [
+  parseArticle(rawDeepWorkRoutine),
   parseArticle(rawAiBusinessMindset),
   parseArticle(rawAllCodeIsSlop),
 ];

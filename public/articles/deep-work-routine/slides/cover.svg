@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <rect width="600" height="400" fill="#faf9f5"/>
+  <rect x="24" y="24" width="552" height="352" rx="12" fill="none" stroke="#e7e6e1" stroke-width="2"/>
+  <line x1="60" y1="112" x2="148" y2="112" stroke="#c96442" stroke-width="4" stroke-linecap="round"/>
+  <text x="60" y="92" font-family="Georgia, 'Times New Roman', serif" font-size="18" letter-spacing="3" fill="#c96442" font-weight="600">FUTURE / PROOF</text>
+  <text x="60" y="192" font-family="Georgia, 'Times New Roman', serif" font-size="54" fill="#141413" font-weight="500">1 Hour</text>
+  <text x="60" y="254" font-family="Georgia, 'Times New Roman', serif" font-size="54" fill="#141413" font-weight="500">Every Morning.</text>
+  <text x="60" y="318" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="22" fill="#3d5a80">每天清晨 1 小时 · 深度工作与杠杆</text>
+  <text x="540" y="348" text-anchor="end" font-family="Georgia, serif" font-size="16" fill="#73726c">DAN KOE</text>
+</svg>

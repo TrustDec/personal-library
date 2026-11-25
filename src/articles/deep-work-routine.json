@@ -1,0 +1,536 @@
+{
+  "slug": "deep-work-routine",
+  "titleEn": "The Deep Work Routine That Changed My Life",
+  "titleZh": "改变我人生的深度工作习惯：每天清晨 1 小时",
+  "speaker": "Dan Koe",
+  "role": "Writer · Founder of Eden",
+  "event": "future/proof",
+  "location": "Substack",
+  "date": "2026-11-25",
+  "duration": "约 10 分钟阅读",
+  "cover": "cover.svg",
+  "source": "https://letters.thedankoe.com/p/the-deep-work-routine-that-changed-651",
+  "sourceLabel": "The deep work routine that changed my life — Dan Koe",
+  "blocks": [
+    {
+      "type": "heading",
+      "id": "intro",
+      "en": "Intro — 1 hour every morning",
+      "zh": "序言：每天清晨 1 小时"
+    },
+    {
+      "type": "pair",
+      "en": "If you can spend 8 hours building someone else’s dream, you can spend 1 hour building your own.",
+      "zh": "既然你每天能花 8 小时去成全别人的梦想，就完全可以抽出 1 小时来搭建自己的未来。"
+    },
+    {
+      "type": "pair",
+      "en": "But how you use that 1 hour determines everything.",
+      "zh": "但你如何使用这 1 小时，决定了一切。"
+    },
+    {
+      "type": "pair",
+      "en": "If you were to focus on the one thing that leads to the most progress toward your ideal life, for 1 hour a day, first thing in the morning when your mind is clear and distractions are minimal, for 6-12 months, that’s 365 potential hours invested in the life you want. You can do far more than you think in that amount of time.",
+      "zh": "如果你每天清晨醒来，趁着头脑最清醒、干扰最少的时候，抽出 1 小时，只专注做那件最能把你推向理想生活的事，坚持 6 到 12 个月，你就能把多达 365 小时真正投入到自己想要的人生里。在这段时间里，你能做成的事远比你想象的要多。"
+    },
+    {
+      "type": "pair",
+      "en": "For most of my life, I worked 2-4 hours a day.",
+      "zh": "在过去很长一段时间里，我每天只工作 2 到 4 小时。"
+    },
+    {
+      "type": "pair",
+      "en": "I feel like influencers flexing their millions put a sour taste in people’s mouth, but for the sake of results, I’ll flex a bit. Those 2-4 hours are exactly how I built an audience that’s closing in on 5 million followers across all platforms, and I’ve made just around $10m from my personal brand alone, not my other companies. That’s the time I used to put out posts, articles, newsletters, YouTube videos and podcasts. That’s also how I wrote 2 books with 2 more on the way - no AI writing involved.",
+      "zh": "我知道网红动不动炫耀自己赚了几百万很让人反感，但为了用结果说话，我这里还是稍微亮一下成绩单。正是靠着每天这 2 到 4 小时，我在全平台积累了接近 500 万粉丝，单靠个人品牌就赚了大约 1000 万美元——这还没算上我的其他公司。我发帖、写长文、做电子报、拍 YouTube 视频、录播客，全都在这段时间里完成；我还靠这段时间写了 2 本书，另外 2 本也在路上，全程没有用 AI 代笔。"
+    },
+    {
+      "type": "pair",
+      "en": "And when I had a 9-5 job, I didn’t have 12 hours a day to make my side business a success. I had 1-2 hours, and a few more on the weekend.",
+      "zh": "在我还朝九晚五上班那会儿，我也没有一天 12 小时的空闲去把副业做起来。我每天只有 1 到 2 小时，再加上周末多出来的那点时间。"
+    },
+    {
+      "type": "pair",
+      "en": "If you want the stupid simple deep work routine, go ahead and skip to the last section of this letter.",
+      "zh": "如果你只想拿走那套简单到极致的深度工作流程，直接跳到文章最后一部分就行。"
+    },
+    {
+      "type": "pair",
+      "en": "But if you have a greater attention span than a goldfish, and understand that the “actionable advice” you crave so bad means nothing without context, I would encourage you to read every section. Bookmark this if you are short on time and set a reminder to come back to it.",
+      "zh": "但只要你的注意力比金鱼长一点，并且明白你苦苦追寻的「实操干货」一旦脱离底层逻辑就毫无意义，我还是建议你把每一节都读完。如果眼下没空，先收藏起来，设个提醒回头再看。"
+    },
+    {
+      "type": "pair",
+      "en": "You are free to skip to the later sections, but if you have a greater attention span than a goldfish, I would encourage you to read every section. Bookmark this if you are short on time and set a reminder to come back to it.",
+      "zh": "你当然可以跳过前面直接看后面的章节，但只要你的注意力不止七秒，我依然建议你从头读到尾。时间紧的话，先收藏并设好提醒，回头慢慢读。"
+    },
+    {
+      "type": "pair",
+      "en": "Let’s discuss why busy people end up on the bottom, why pursuing anything but your life’s work is a waste of time - especially as jobs go extinct slowly then all at once, and finally, how to structure your day not only for maximum productivity, but for maximum leverage.",
+      "zh": "接下来我们聊聊三件事：为什么越忙的人反而越容易垫底；为什么在传统岗位先是悄无声息、接着瞬间消亡的当下，把精力花在毕生事业之外的任何事上都是浪费时间；以及最后，如何安排你的一天，不仅是为了拉满效率，更是为了把杠杆放到最大。"
+    },
+    {
+      "type": "pair",
+      "en": "Enjoy.",
+      "zh": "祝阅读愉快。"
+    },
+    {
+      "type": "heading",
+      "id": "s1",
+      "en": "I – For most of human history, the busiest people were the lowest status.",
+      "zh": "一、在人类绝大多数历史里，越忙的人地位越低"
+    },
+    {
+      "type": "pair",
+      "en": "Aristotle said we work so that we can have leisure, and that without it no one becomes wise.",
+      "zh": "亚里士多德说过，我们工作是为了拥有闲暇，而没有闲暇，任何人都无法生出智慧。"
+    },
+    {
+      "type": "pair",
+      "en": "Seneca said that the busiest people were often the least accomplished, because they spent their days on everything except their own lives.",
+      "zh": "塞涅卡也说过，最忙碌的人往往成就最小，因为他们把整天的时间都耗在了各种杂事上，唯独没有留给自己的生活。"
+    },
+    {
+      "type": "pair",
+      "en": "Leisure used to be a mark of status while busyness was a mark of obligation. Busyness belonged to slaves, serfs, and laborers who worked from sunrise to sundown.",
+      "zh": "从前，闲暇是地位的象征，忙碌则是身不由己的标志。只有奴隶、农奴和从日出干到日落的苦力，才会整天忙得停不下来。"
+    },
+    {
+      "type": "pair",
+      "en": "At some point in the last century, that flipped.",
+      "zh": "但在过去这一个世纪的某个节点，一切彻底倒过来了。"
+    },
+    {
+      "type": "pair",
+      "en": "“I’m so busy” became a badge of honor, even when most people knew they were working on nothing meaningful, with nothing to show except time invested in someone else’s vision.",
+      "zh": "「我忙死了」成了大家挂在嘴边的荣誉勋章——哪怕大多数人心里很清楚，自己忙的根本不是什么有意义的事，到头来除了把时间投进别人的愿景里，什么也没攒下。"
+    },
+    {
+      "type": "pair",
+      "en": "I believe that this flip will happen again.",
+      "zh": "我相信，这种局面很快会再翻转一次。"
+    },
+    {
+      "type": "pair",
+      "en": "Soon, it will be seen (more than it already is) as low status to be glued to your computer, sending messages back and forth to Claude all day. We all have big dreams and aspirations, but it requires a certain level of creativity to achieve those dreams without 12 hours of “hard work” as your main strategy.",
+      "zh": "用不了多久，整天死守在电脑前、来来回回给 Claude 发消息的状态，就会比现在更明显地被看作低地位的体现。每个人都有宏大的梦想和抱负，但要想不靠每天 12 小时的「苦干」来实现它们，你需要的是真正意义上的创造力。"
+    },
+    {
+      "type": "pair",
+      "en": "Time for thinking, strategizing, and creativity will be the mark of high status. In many cases, it will be reserved for the rich.",
+      "zh": "拥有充裕的时间去思考、谋划和创造，会重新成为高地位的标志；而在很多情况下，这种时间本身就会变成富人的专属。"
+    },
+    {
+      "type": "pair",
+      "en": "Now, when I say I worked 2-4 hours a day above, that was somewhat of a lie.",
+      "zh": "不过话说回来，我前面说自己每天只工作 2 到 4 小时，其实有点「撒谎」的成分。"
+    },
+    {
+      "type": "pair",
+      "en": "As a writer, if you were to add up the time I spend walking, reading, learning, thinking, and even sleeping... I “work” 24 hours a day. Because all of those activities fuel the quality of my writing, and one hour of writing a day can reach millions of people, and if a fraction of those people purchase from me or my business, I can make millions of dollars. Some people can’t wrap their head around this, because their income is tied to their time spent doing labor. They do not earn from the creative ability of their mind, which will only become more and more of a requirement in the future.",
+      "zh": "作为一名创作者，如果你把我散步、阅读、学习、思考甚至睡觉的时间都算进去，我其实一天 24 小时都在「工作」。因为这些活动全都在滋养我文章的质量；而每天 1 小时的写作可以触达数百万人，只要其中极小一部分人愿意为我或我的产品买单，就能带来数百万美元的收入。很多人想不通这一点，是因为他们的收入还死死绑在劳动时长上，而不是靠头脑的创造力赚钱——而这种创造力，在未来只会越来越成为刚需。"
+    },
+    {
+      "type": "pair",
+      "en": "This is mostly why we’re building Eden. It is where you grow your audience and build a digital business. It’s where you sell your products, save all your ideas and bookmarks, and turn those unique ideas into content. If that content gets traction, then you promote your work and get paid for it. There’s a 30 day sprint that walks you through all of this. It’s a measly $5.",
+      "zh": "这也是我们打造 Eden 的主要原因。你可以在那里积累受众、搭建自己的数字业务，售卖产品，把平时攒下的灵感和书签都存进去，再把这些独特想法转化为内容。一旦内容跑出流量，就顺势推广自己的作品并获得回报。里面还有一套 30 天冲刺计划带你一步步走完全程，只要区区 5 美元。"
+    },
+    {
+      "type": "heading",
+      "id": "s2",
+      "en": "II – The historical normal is to be self-employed, working a job was a temporary glitch.",
+      "zh": "二、自雇才是历史常态，打工只是一次短暂的意外"
+    },
+    {
+      "type": "pair",
+      "en": "“Specialization is in fact only a fancy form of slavery wherein the ‘expert’ is fooled into accepting his slavery by making him feel that in return he is in a socially and culturally preferred, ergo, highly secure, lifelong position.” — Buckminster Fuller",
+      "zh": "「所谓专业化分工，本质上只是一种披着光鲜外衣的奴役：它让所谓的『专家』心甘情愿地接受被奴役的状态，只因为这能换来一种被社会和文化推崇、看起来无比安稳的终身职位。」——巴克敏斯特·富勒（Buckminster Fuller）"
+    },
+    {
+      "type": "pair",
+      "en": "During Industrialization, everything became a factory.",
+      "zh": "工业化浪潮袭来时，世间万物都被改造成了工厂。"
+    },
+    {
+      "type": "pair",
+      "en": "Schools included.",
+      "zh": "学校也不例外。"
+    },
+    {
+      "type": "pair",
+      "en": "The sole purpose of a school system is to prepare children for the jobs of its time, and the jobs at the time were factory jobs - and I can’t help but wonder how education is going to look when the jobs of our time drastically change, or just become meaningless. I believe we are heading into a Second Renaissance, but I’ll save that for later.",
+      "zh": "学校体系的唯一目的，就是把孩子培养成适应那个时代岗位的人，而当时的主流岗位正是工厂流水线。我也忍不住在想：当我们这个时代的岗位发生剧变、甚至彻底失去意义时，教育会变成什么样？我相信我们正在迈向一场「第二次文艺复兴」，不过这个话题留到以后再细聊。"
+    },
+    {
+      "type": "pair",
+      "en": "Bells marked the start and end of the day. Kids are grouped by age, like batches. Subjects are split up, like an assembly line. Grades and tests were quality checks. Students were rewarded for doing what they were told, on someone else’s schedule, toward someone else’s goal.",
+      "zh": "上下课铃声规定了一天的起止；孩子按年龄分班，就像工厂按批次排产；学科被切得零零碎碎，就像流水线上的工序；考试和分数则是质检环节。学生只要按别人的时间表听话照做、去完成别人定好的目标，就能拿到奖励。"
+    },
+    {
+      "type": "pair",
+      "en": "Everyone reading this likely went through this system.",
+      "zh": "正在读这篇文章的每个人，大概都经历过这套体系。"
+    },
+    {
+      "type": "pair",
+      "en": "And since the mind is shaped through conditioning, and our identity latches onto that which provides us security and comfort, we are all in some way unconsciously tied to a style of work that was only an experiment.",
+      "zh": "由于人的心智是会被长期驯化的，加上我们的自我认同天生会依附于那些带来安全感和舒适感的东西，所以我们每个人都在不知不觉中，被捆绑在了一种原本只是短期实验的工作模式上。"
+    },
+    {
+      "type": "pair",
+      "en": "The modern concept of a job is only 100-200 years old. Homo sapiens are 300k years old. Working 9-5, being paid a wage, and having your worth attached to your title is not normal, and it definitely isn’t beneficial to how our brains are wired. Life quickly becomes mechanical.",
+      "zh": "现代意义上的「固定工作」不过才出现了一两百年，而智人已经存在了 30 万年。朝九晚五、领固定薪水、把个人价值和头衔绑在一起，根本不是常态，也绝不符合我们大脑的运转方式。长此以往，人生很快就会变得机械麻木。"
+    },
+    {
+      "type": "pair",
+      "en": "Work used to mean owning your work.",
+      "zh": "过去，工作意味着你真正拥有自己的劳动成果。"
+    },
+    {
+      "type": "pair",
+      "en": "In 1800, most Americans were farmers, farm workers, or ran a family business. The word “job” meant one piece of work until the late 1700s. It did not mean 40+ years of your life.",
+      "zh": "1800 年时，大多数美国人都是农民、农场工人，或者经营着家族小生意。直到 18 世纪末，「job」这个词指的都只是一件具体的零活，而不是把你 40 多年的人生整个买断。"
+    },
+    {
+      "type": "pair",
+      "en": "The Renaissance ideal was the “universal man” who did many things well. Craftsmen worked under a guild, progressing from apprentice to journeyman to master. “Masterpiece” first meant the work you made to prove you were a master.",
+      "zh": "文艺复兴时期推崇的是多才多艺的「通才」。工匠们在行会体系下成长，从学徒一路做到熟练工，再晋升为大师。「杰作（Masterpiece）」这个词最初的意思，就是你为了证明自己配得上大师称号而亲手打造的作品。"
+    },
+    {
+      "type": "pair",
+      "en": "I believe history is repeating itself, as it always does, and we are entering the era of the craftsman. A craftsman’s worth was determined by how they used their tools. Today a laptop, the internet, and AI are cheap tools anyone can own. The craft they pursue, their vision for their work, and obsession over the details is what makes the difference. Anyone can build anything, but attention is finite, so only those who treat their work as their life’s work, pouring their heart and soul into what they do will rise above.",
+      "zh": "历史总是不断重演，我相信我们正在重新进入工匠时代。工匠的价值取决于他怎么驾驭手中的工具；而在今天，笔记本电脑、互联网和 AI 都是人人买得起的廉价工具，真正拉开差距的，是你钻研的手艺、对作品的愿景，以及对细节的极致苛求。现在人人都能做出东西，但世人的注意力是有限的——只有那些把工作当成毕生事业、倾注全部心血的人，才能脱颖而出。"
+    },
+    {
+      "type": "pair",
+      "en": "In The Third Wave, Alvin Toffler had a similar theory.",
+      "zh": "阿尔文·托夫勒在《第三次浪潮》里也提出过类似的观点。"
+    },
+    {
+      "type": "pair",
+      "en": "He called it the Electronic Cottage, which he saw as the third wave of work.",
+      "zh": "他把这称为「电子农舍（Electronic Cottage）」，并视其为人类工作形态的第三次浪潮。"
+    },
+    {
+      "type": "pair",
+      "en": "The first wave was farming, people mostly made what they used. The second wave was the factory, which split people into producers and consumers. The third wave is information and computers, where work moves back home. We once again become creators.",
+      "zh": "第一次浪潮是农耕时代，人们大多自产自用；第二次浪潮是工厂时代，把人强行割裂成了生产者和消费者；第三次浪潮则是信息与计算机时代，工作重新回到家里，我们也再一次成为创造者。"
+    },
+    {
+      "type": "pair",
+      "en": "His argument is that a lot of work was “cottage industry,” where families spun, wove, and made goods at home. The factory pulled work out of the home and into one big building. He predicted that computers would reverse that and bring work home again (I’m sitting in my office, in my underwear, at 10:09 am, writing this, by the way).",
+      "zh": "他的核心论点是，过去很多生产原本就是「家庭手工业」，一家人在家里纺纱、织布、做东西。工厂把工作从家里抽离出来，塞进了一栋大厂房里。他预言计算机会逆转这一切，把工作重新带回家——顺带一提，我此刻上午 10 点 09 分，就正穿着内裤坐在自家书房里敲下这段话。"
+    },
+    {
+      "type": "pair",
+      "en": "During the First Wave most people consumed what they themselves produced. They were neither producers nor consumers in the usual sense. They were instead what might be called prosumers.",
+      "zh": "在第一次浪潮中，大多数人消费的就是自己生产的东西。他们既不是传统意义上的生产者，也不是单纯的消费者，而是可以被称为「产消者（prosumers）」的存在。"
+    },
+    {
+      "type": "pair",
+      "en": "I believe that’s what a creator is. Not a content creator per se, although social media is where a creator would find their audience in today’s world, until social media is replaced with another form of media.",
+      "zh": "我认为，这正是「创作者」的本质——未必单指内容创作者，只不过在当下这个时代，创作者需要借助社交媒体去找到自己的受众，直到未来出现另一种新的媒介形态取而代之。"
+    },
+    {
+      "type": "pair",
+      "en": "A friend I have online sells cotton apparel because he is against polyester clothing. I can get my apparel from him. Another online friend teaches philosophy, I can get my education from him. Another sells software. Another sells and ships baked goods. So on and so forth. I can pursue my interests and find a wedge in a digital tribe that I can contribute best to - we call this a “niche.” The creator economy has had its ups and downs, but at the end of the day, I see it as a digital society where we can learn, earn, create, and contribute to each other’s lives. That is the modern renaissance lifestyle.",
+      "zh": "我在网上认识一位朋友，因为反感涤纶面料，自己做起了纯棉服饰品牌，我买衣服就可以找他；另一位线上朋友讲哲学，我可以跟着他学习；还有人卖软件，有人做烘焙并邮寄发货，诸如此类。每个人都可以顺着自己的兴趣，在某个数字部落里找到自己最擅长贡献价值的切入点——也就是我们常说的「细分领域」。创作者经济起起伏伏，但归根结底，我把它看作一个数字社会：大家在这里彼此学习、谋生、创造，也点亮彼此的生活。这就是现代版的文艺复兴生活方式。"
+    },
+    {
+      "type": "pair",
+      "en": "Marshal McLuhan called this the global village where our specialist and fragmented civilization begins to retribalize.",
+      "zh": "马歇尔·麦克卢汉把这称为「地球村（global village）」——高度分工、支离破碎的现代文明，正借此重新部落化。"
+    },
+    {
+      "type": "pair",
+      "en": "If you have any desire to pursue your interests, do what you want with your life, and become adaptable enough to not have to worry about job loss:",
+      "zh": "如果你内心有任何渴望——想追随自己的兴趣、按自己的意愿过这一生，并且练就足够强的适应力、再也不用为失业提心吊胆——那么接下来这句话你一定要听进去："
+    },
+    {
+      "type": "heading",
+      "id": "s3",
+      "en": "III – I’m begging you to go all in on your life’s work",
+      "zh": "三、我恳请你，全力以赴投入自己的毕生事业"
+    },
+    {
+      "type": "pair",
+      "en": "“There are almost 7B people on this planet. Someday, I hope, there will be almost 7B companies.” — Naval Ravikant",
+      "zh": "「这颗星球上有将近 70 亿人。我希望有一天，世上能有将近 70 亿家公司。」——纳瓦尔·拉维坎特（Naval Ravikant）"
+    },
+    {
+      "type": "pair",
+      "en": "If you are up to date with tech and AI, you’ve probably heard something like this:",
+      "zh": "如果你一直关注科技和 AI 动态，大概经常听到这种论调："
+    },
+    {
+      "type": "pair",
+      "en": "Software is dead. Info is dead. Companies are dead. Everything is dead. Everyone is just going to build their own software and get the information they need with AI.",
+      "zh": "「软件已死，知识付费已死，公司已死，一切都死了。以后人人都能用 AI 自己写软件，想要什么信息直接问 AI 就行了。」"
+    },
+    {
+      "type": "pair",
+      "en": "So what do you do when it feels worthless to even start?",
+      "zh": "当连迈出第一步都显得毫无意义时，你该怎么办？"
+    },
+    {
+      "type": "pair",
+      "en": "First, everything is not dead. Social media is great at keeping you complacent.",
+      "zh": "首先，这一切根本没死。社交媒体最擅长的，就是用贩卖焦虑让你安于现状、原地躺平。"
+    },
+    {
+      "type": "pair",
+      "en": "Jake Paul, of all people, has pivoted to the info space - look at his business YouTube channel, because frankly they are still the best way for creators to monetize, even when AI has all information (hint: if someone doesn’t know what to ask AI, and they don’t know what good advice looks like, then they won’t get the information they need - humans will be proxies for education and information for people who resonate with their point of view.)",
+      "zh": "连杰克·保罗（Jake Paul）这样的人都转战知识内容赛道了——去看看他的商业 YouTube 频道就知道了。说白了，就算 AI 掌握了全世界的信息，知识产品依然是创作者最好的变现方式。背后的道理很简单：如果一个人连该问 AI 什么都不知道，也分辨不出什么是好建议，他就不可能从 AI 那里拿到真正需要的信息。真正能引发共鸣的「人」，会成为追随者获取教育和信息的过滤器。"
+    },
+    {
+      "type": "pair",
+      "en": "Second, considering people don’t even cook their own food and pay far too much for Uber Eats, I highly doubt they will build their own software. Building a tool to replace a $10-20 subscription instead of focusing on one lever-moving action that makes $1000 an hour is foolish.",
+      "zh": "其次，想想看，大家连饭都懒得自己做、宁愿花大价钱点 Uber Eats 外卖，我实在怀疑他们会去自己写软件。为了省下每月一二十美元的订阅费而花时间自己造轮子，却耽误了那些能让你每小时赚 1000 美元的高杠杆动作，这简直太蠢了。"
+    },
+    {
+      "type": "pair",
+      "en": "Plus, I would rather pay someone who’s made it their life’s work to create the best, say, content scheduling app than build one myself (although that’s what I built), there aren’t going to be 1000 content schedulers in the future. I would rather pay the craftsman who is going to obsess over the details, because obsessing over the details myself would just distract me from moving my own priorities forward.",
+      "zh": "再说了，比如内容排期工具这种东西，我宁愿花钱买别人倾注毕生心血打磨出来的顶级产品，也不想自己从头造一个（虽然我自己确实做过）。未来不会冒出 1000 个内容排期工具；我更愿意为死磕细节的工匠付费，因为如果我自己去死磕那些细节，只会分散精力，耽误我推进真正重要的事。"
+    },
+    {
+      "type": "pair",
+      "en": "“Anyone can build anything” is the greatest distraction of our time when we are all painfully aware that long-term focus on one meaningful goal with high potential payoff is what leads to the greatest result and most fulfillment. The future isn’t everyone building everything, but everyone building their one thing and trading with each other. A global village.",
+      "zh": "「人人都能造万物」是我们这个时代最大的干扰项。我们心里都很清楚，真正能带来最大成果和最深成就感的，是长期死磕一个有意义、高回报潜力的目标。未来不是每个人都把所有东西做一遍，而是每个人专心做好自己那一件作品，再彼此交换价值——这才是真正的地球村。"
+    },
+    {
+      "type": "pair",
+      "en": "In that case, the best course of action is to discover what your life’s work is, and use the tools available to you to build it and spread it to an audience of people who resonate with your mission.",
+      "zh": "既然如此，最好的出路就是找到你的毕生事业，用手头能用的工具把它做出来，再传播给认同你理念的那群人。"
+    },
+    {
+      "type": "pair",
+      "en": "Your “life’s work” is work that allows you, specifically, to unleash the full creative ability of your mind, so that you have a vessel for your potential and contribute to humanity at your fullest.",
+      "zh": "所谓「毕生事业」，就是那件专属于你、能让你彻底释放大脑全部创造力的事情——它像一只容器，稳稳承接你的全部潜能，让你以最饱满的状态回馈世界。"
+    },
+    {
+      "type": "pair",
+      "en": "It is difficult to label exactly what your life’s work is. It isn’t something you need to name. People get hung up on knowing exactly what they do as their life’s work. This isn’t a job. It’s not a set string of tasks. It’s a path in the unknown. It is a way of life where your learning, thinking, and acting are in harmony, and you are contributing to yourself and the world in a way only you can.",
+      "zh": "毕生事业很难用一个简单的标签去定义，你也没必要非给它起个名字。很多人总纠结于「我的毕生事业到底具体是干什么的」，但它根本不是一份固定岗位，也不是一串按部就班的任务清单，而是一条通往未知的探索之路。它是一种生活方式：让你的学习、思考与行动融为一体，以只有你能做到的方式，同时成就自己与世界。"
+    },
+    {
+      "type": "pair",
+      "en": "That means the work you choose must be something you have a deep interest in, and allows for near-infinite upward movement.",
+      "zh": "这意味着，你选择的方向必须让你发自内心地着迷，而且拥有近乎无限的上升空间。"
+    },
+    {
+      "type": "pair",
+      "en": "In other words, you’ll probably have to become an entrepreneur of some form.",
+      "zh": "换句话说，你大概率得成为某种意义上的创业者。"
+    },
+    {
+      "type": "pair",
+      "en": "Because with a “job,” as we define it today, there tends to be a low skill ceiling. You reach a point where you’ve learned enough to coast, the work becomes repetitive and mundane, and you get bored with no freedom to grow into your next shell, until even that shell becomes too constrained, so you overindulge in degenerative activities.",
+      "zh": "因为按今天的定义，一份普通「工作」的技能天花板往往很低。你学到一定程度就能躺平应付了，工作变得日复一日、枯燥乏味；你既感到无聊，又没有自由去破壳成长、迈向下一个阶段。等到连现有的外壳都让你觉得憋屈时，人就会忍不住一头扎进各种消耗身心的低级娱乐里。"
+    },
+    {
+      "type": "pair",
+      "en": "The question then is:",
+      "zh": "那么问题来了："
+    },
+    {
+      "type": "pair",
+      "en": "How do you find the thing that you, specifically, were meant to do?",
+      "zh": "你该如何找到那件仿佛天生就该由你去做的事？"
+    },
+    {
+      "type": "pair",
+      "en": "And how do you turn that into your work so that you can comfortably survive and reap the meaning that comes from impacting others?",
+      "zh": "又该如何把它变成你的事业，既能体面从容地生活，又能收获影响他人带来的价值感？"
+    },
+    {
+      "type": "heading",
+      "id": "s4",
+      "en": "IV – One hour a day. One meaningful project. One vision for the future.",
+      "zh": "四、每天 1 小时，1 个有意义的项目，1 个未来愿景"
+    },
+    {
+      "type": "pair",
+      "en": "“Code and media are permissionless leverage. They’re the leverage behind the newly rich. You can create software and media that works for you while you sleep.” — Naval Ravikant (again)",
+      "zh": "「代码和媒体是无需许可的杠杆（permissionless leverage），也是新富阶层背后的真正推手。你可以打造软件和内容，让你在睡觉时它们也在替你赚钱。」——再次引用纳瓦尔·拉维坎特"
+    },
+    {
+      "type": "pair",
+      "en": "To tie this all together:",
+      "zh": "把前面聊的串起来，其实就三点："
+    },
+    {
+      "type": "pair",
+      "en": "Non-busyness is the new mark of status, and it is required for true creative thinking.",
+      "zh": "第一，不再忙得团团转，是新时代的地位象征，也是进行真正创造性思考的前提。"
+    },
+    {
+      "type": "pair",
+      "en": "The pendulum is swinging back to self-employment and entrepreneurship being the norm, take advantage early.",
+      "zh": "第二，时代的钟摆正在摆回自雇与创业成为常态的轨道，越早抓住这波趋势越好。"
+    },
+    {
+      "type": "pair",
+      "en": "If you want to compete, you must pursue your life’s work - you must dedicate yourself to one thing, avoid distractions, not try to build everything, and focus on quality and craftsmanship - or else you will be bucketed in with everyone else producing slop.",
+      "zh": "第三，想在这场竞争里立住脚，你必须投身于自己的毕生事业——专心致志做好一件事，屏蔽干扰，不要妄想什么都自己造，把全部精力放在品质与工匠精神上；否则，你就会和其他批量制造劣质内容的人一起被扫进垃圾堆。"
+    },
+    {
+      "type": "pair",
+      "en": "All of these things are arguing the importance of one thing - leverage.",
+      "zh": "所有这些，归根结底都在指向同一件事：杠杆。"
+    },
+    {
+      "type": "pair",
+      "en": "Leverage is getting more of a result per hour of effort, because something other than your time keeps doing the work after you stop.",
+      "zh": "所谓杠杆，就是让你投入的每一小时都能撬动更大的结果——因为当你停下手头的工作时，还有别的东西在持续替你运转。"
+    },
+    {
+      "type": "pair",
+      "en": "Creative thinking, entrepreneurship (freedom of work), and experience are necessary pre-requisites to leverage. It is the only way to compete in a world of ‘everyone can do anything.’ Committing to anything but your life’s work is a death sentence.",
+      "zh": "创造性思维、创业精神（也就是掌控工作的自由）和实战经验，是撬动杠杆必不可少的前提。在一个「人人都能做任何事」的世界里，这是你唯一的竞争力。把生命耗在毕生事业之外的任何事上，几乎都是死路一条。"
+    },
+    {
+      "type": "pair",
+      "en": "At a job, the employee mindset you adopt conditions your mind to be anti-leverage. And most people have this way of thinking deeply ingrained in them.",
+      "zh": "在职场里，长期养成的打工心态会把你的大脑驯化成「反杠杆」模式。而且绝大多数人都已经把这种思维刻进了骨子里。"
+    },
+    {
+      "type": "pair",
+      "en": "Most people need to be told what to do. They have difficulty accepting that anything can be figured out through the process of trial and error - that’s how the world as we know it came to be, and people did in fact do incredible things before there were instruction manuals for doing them.",
+      "zh": "大多数人习惯了等别人安排任务，很难相信很多事其实可以靠反复试错自己摸索出来——可我们今天所知的世界本来就是这么建起来的，在有操作手册之前，人类就已经做成过无数了不起的事。"
+    },
+    {
+      "type": "pair",
+      "en": "Most people can’t dissociate time from money. They see a task’s worth as flat, because as long as they show up for 40 hours a week, they’ll get a paycheck. They cannot fathom that there is some way to make an entire months worth of their income in an hour, if they simply focused only on the tasks with the highest leverage.",
+      "zh": "大多数人也无法把「时间」和「金钱」解绑。在他们眼里，每件事的价值都是平的，因为只要每周按时打卡坐满 40 小时，就能领到一份薪水。他们根本想象不到：只要把精力只集中在杠杆最高的那几件事上，完全有可能用 1 小时赚到过去一整月的收入。"
+    },
+    {
+      "type": "pair",
+      "en": "As an example, I can publish an X article, and that article can somehow amass a freakish 260 million views, and 1% of those people visit a product page, and 1% of them purchase that product for $150, that’s $3.9 million.",
+      "zh": "举个例子：我在 X 上发一篇长文，如果它碰巧拿到了夸张到离谱的 2.6 亿次浏览，只要其中 1% 的人点进产品页，再有 1% 的人买了售价 150 美元的产品，那就是 390 万美元。"
+    },
+    {
+      "type": "pair",
+      "en": "But those are crazy numbers.",
+      "zh": "当然，这个数字确实太疯狂了。"
+    },
+    {
+      "type": "pair",
+      "en": "What if you post consistently, to the point of generating a few hundred thousand impressions a month (not that hard to do, if you learn and actually try and don’t quit after 2 weeks - it takes longer than 2 weeks to get good at something silly), and you understand that you can tweak the post, the landing page, and the offer to increase conversions to an “okay” 2.5%, then that’s more money than you’d know what to do with.",
+      "zh": "换个接地气的算法：假如你坚持稳定输出，做到每个月有几十万曝光量（只要肯学、真去干，别练了两周就放弃，这其实没那么难——想把一件事练好肯定不止两周，别犯傻），并且懂得通过不断打磨内容、落地页和产品方案，把转化率优化到「还算不错」的 2.5%，那赚到的钱就已经多到让你不知该怎么花了。"
+    },
+    {
+      "type": "pair",
+      "en": "That’s leverage.",
+      "zh": "这就是杠杆。"
+    },
+    {
+      "type": "pair",
+      "en": "You have posts that generate traffic, and you have a product that sells while you sleep. Both are in alignment with your life’s work.",
+      "zh": "一边是有内容源源不断带来流量，另一边是有产品在你睡觉时自动成交，而且这两者都与你的毕生事业高度一致。"
+    },
+    {
+      "type": "pair",
+      "en": "It’s like dating. If you (the product) are valuable, but you don’t put yourself in front of men/women (traffic), then you aren’t going to get a date. It’s obvious. If you (the product) aren’t valuable, and you put yourself in front of a ton of men/women (traffic) then you probably won’t get a date either, at least not one that you want.",
+      "zh": "这就像谈恋爱。如果你本身很有价值（产品够好），却从来不出现在异性面前（没有流量），那显然找不到约会对象；反过来，如果你自己没什么价值（产品不行），哪怕走到成千上万人面前曝光（流量再大），大概率也约不到人——至少约不到你真正想约的那种人。"
+    },
+    {
+      "type": "pair",
+      "en": "Outside of finding what your life’s work is, those are quite literally the only things that matter. Improving what you offer - a product or service - and iterating on your posts, ads, sponsorships or whatever else you use to generate traffic. For someone who doesn’t have capital to invest or a proven offer, your best bet is organic posts on social media.",
+      "zh": "除了找到自己的毕生事业之外，真正要紧的事其实就这两件：不断打磨你的产品或服务，同时持续迭代你的内容、广告、赞助或其他任何引流方式。如果你手上既没有启动资金，也还没有经过验证的产品，最好的选择就是在社交媒体上做自然流量内容。"
+    },
+    {
+      "type": "pair",
+      "en": "I made this Life’s Work Finder AI that interviews you to find your life’s work, then tells you what your content topics could be, and what first product you could sell, then helps you set it all up in Eden to start posting and selling.",
+      "zh": "我专门做了一个叫「人生事业探索器（Life’s Work Finder）」的 AI 工具：它会通过访谈帮你找到自己的毕生事业，告诉你内容可以写哪些选题、第一款产品该卖什么，再帮你在 Eden 里把这一切搭起来，直接开始发内容、卖产品。"
+    },
+    {
+      "type": "pair",
+      "en": "Translating this - what do you actually do?",
+      "zh": "落到具体行动上，你到底该怎么做？"
+    },
+    {
+      "type": "pair",
+      "en": "Block out 1 hour a day.",
+      "zh": "每天留出 1 小时。"
+    },
+    {
+      "type": "pair",
+      "en": "Work on 1 meaningful project.",
+      "zh": "死磕 1 个有意义的项目。"
+    },
+    {
+      "type": "pair",
+      "en": "Aim for 1 vision for your future.",
+      "zh": "瞄准 1 个清晰的未来愿景。"
+    },
+    {
+      "type": "pair",
+      "en": "Take it 1 day at a time, for 1 year.",
+      "zh": "一天一天走下去，坚持满 1 年。"
+    },
+    {
+      "type": "pair",
+      "en": "1 hour of deep work is better than 0 hours, and you can drastically change your life in 365 hours.",
+      "zh": "每天 1 小时深度工作，远远胜过 0 小时；只要攒够 365 小时，就足以彻底改写你的人生。"
+    },
+    {
+      "type": "pair",
+      "en": "Then, increase to 2 hours, maybe even 3. You’ll have other work to do as well, but I’m more worried about focusing on executing the highest priority, highest leverage task first thing in the morning to ensure it gets done.",
+      "zh": "等习惯养成后，再慢慢加到 2 小时，甚至 3 小时。你白天当然还有其他杂活要处理，但我更看重的是：每天早上第一件事，就先把优先级最高、杠杆最大的那件任务干完，确保它绝不被挤掉。"
+    },
+    {
+      "type": "pair",
+      "en": "Because when was the last time you asked yourself, before you started working, if I were to do one thing today, what would take me the furthest to my goal?",
+      "zh": "想想看，你上一次在开工前问自己「如果今天只做一件事，哪件事能把我离目标推得最远」，是什么时候？"
+    },
+    {
+      "type": "pair",
+      "en": "Probably never.",
+      "zh": "大概从来没有过。"
+    },
+    {
+      "type": "pair",
+      "en": "So what do you do during that one hour?",
+      "zh": "那么，这 1 小时里具体该干什么？"
+    },
+    {
+      "type": "pair",
+      "en": "If you don’t have a product, build one during that hour.",
+      "zh": "如果还没有产品，就在这 1 小时里把产品做出来。"
+    },
+    {
+      "type": "pair",
+      "en": "Once you have the product, start writing content.",
+      "zh": "一旦有了产品，就开始写内容。"
+    },
+    {
+      "type": "pair",
+      "en": "That’s how businesses are built right now.",
+      "zh": "如今的生意，就是这么一步步做起来的。"
+    },
+    {
+      "type": "pair",
+      "en": "Look at Jordan Peterson, Andrew Huberman, and the rest. They probably don’t register themselves as “content creators” or “personal brands.” They have a deep obsession with their interests, they share their learnings and worldview with the world in hopes of helping people.",
+      "zh": "看看乔丹·彼得森（Jordan Peterson）、安德鲁·休伯曼（Andrew Huberman）这些人。他们自己大概根本没把自己当成什么「内容创作者」或「个人品牌」。他们只是对自己的领域有着近乎痴迷的热爱，然后把自己的所学和世界观分享出来，希望能帮到别人。"
+    },
+    {
+      "type": "pair",
+      "en": "They use content as the way to capture attention, because that’s where the attention is right now. It doesn’t matter if you don’t like social media - good luck building a business with the newspaper or radio as your distribution.",
+      "zh": "他们用内容去获取注意力，纯粹是因为当下人的注意力就在这里。你喜不喜欢社交媒体并不重要——不然你试试靠报纸或电台去从零做一家公司，祝你好运。"
+    },
+    {
+      "type": "pair",
+      "en": "I’ll write more on this in future articles.",
+      "zh": "这个话题，我会在后面的文章里继续展开写。"
+    },
+    {
+      "type": "pair",
+      "en": "For now, you can find more of my writing here, use Eden to grow your audience and start an online business here, and use the Life’s Work Finder to implement everything we talked about here.",
+      "zh": "眼下，你可以在原文中读到我的更多文章，通过 Eden 积累受众并启动你的线上业务，也可以用人生事业探索器把今天聊到的一切真正落到实处。"
+    },
+    {
+      "type": "pair",
+      "en": "– Dan",
+      "zh": "—— Dan"
+    }
+  ]
+}

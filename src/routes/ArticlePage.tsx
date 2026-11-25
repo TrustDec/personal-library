@@ -20,7 +20,10 @@ export function ArticlePage() {
   const headingIds = headings.map((heading) => heading.id);
   const active = useActiveHeading(headingIds);
   const kicker = [article.event, article.location, article.date].join(" · ");
-  const [minutes, seconds] = article.duration.split(":");
+  const timeMatch = /^(\d+):(\d{2})$/.exec(article.duration);
+  const durationLabel = timeMatch
+    ? `原片 ${Number(timeMatch[1])} 分 ${timeMatch[2]} 秒`
+    : article.duration;
 
   return (
     <div className="reading">
@@ -53,7 +56,7 @@ export function ArticlePage() {
           <p className="meta">
             {article.speaker} · {article.role}
             <br />
-            原片 {Number(minutes)} 分 {seconds} 秒
+            {durationLabel}
           </p>
         </header>
         <ArticleContent slug={article.slug} blocks={article.blocks} />
