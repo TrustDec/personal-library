@@ -34,6 +34,21 @@ public/articles/        幻灯片
 
 新增一篇：在 `src/articles/` 加 JSON，写入 `catalog.ts` 的列表，图片放到 `public/articles/<slug>/slides/`。阅读页只放讲稿和图；不要 `note` 字段，页脚只保留来源。
 
+## 接手说明
+
+当前 `main` 与 `origin/main` 对齐，最新提交是 `1aafd7c`（优化翻译），上一笔是 `14e6cce`（紧凑版式和暗黑模式）。推到 `main` 会走 GitHub Pages。改 `.github/workflows/` 时，本机 `gh` 的 HTTPS token 没有 `workflow` scope，要用 TrustDec 的 SSH key 推。
+
+版式按用户定过的来，不要再改回去：
+
+- 首页不要大标题、产品示意窗、并排大卡片，也不要解释「英文一行、中文一行」。顶栏是站名、首页、馆藏；右侧是暗黑开关和 GitHub（`https://github.com/TrustDec`）。文章是窄列表：小图加标题。
+- 文章页保留双语正文。顶栏之下，左侧馆藏、右侧目录。
+- 英文大标题不要用很负的字距。
+- 继续用现在的 Vite SPA，不要迁到 GitBook 或 Next.js。
+
+暗黑模式：`index.html` 里的脚本在首屏前读 `localStorage.theme`，没有记录就跟系统。顶栏按钮写入 `light` 或 `dark`，样式在 `src/styles.css` 的 `[data-theme]`。
+
+中文按下面的翻译规范写。`1aafd7c` 已经改过一轮，例如「数据股权」改成了「数据资产」，「主约束」改成了「核心瓶颈」。新译文仍要逐段对照英文，不要再做字面硬贴。
+
 ## 转写与第二语言（中文）翻译规范
 
 将英文演讲或视频转写为中英双语 JSON 时，中文（`zh`）部分以**「像母语者在做同场分享」**为目标，避免字面机翻和电报体：
